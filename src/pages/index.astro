@@ -6,23 +6,25 @@ import BaseHead from '../components/BaseHead.astro';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="Fffood" description="Coming Soon" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+		<BaseHead title="fffood" description="Coming Soon" />		
 	</head>
 	<body>
-		<div class="bg">
-			<img class="brand" src="/img/fffood-brand-red.png">
-		</div>
-		<div class="holding">			
-			<h1>Thinking Small</h1>
-						
-			<p><strong>Our site’s launching soon.</strong>
-				<br>Want to talk in the meantime?
-				<br><a href="https://wa.me/00447771535355">Click to chat</a></p>
-				
-		</div>
+
+		<section class="section">
+			<div class="section__row section__row--stretch hero">
+				<!-- <img class="hero__bg" src="/img/bg.jpg" /> -->
+				<img class="hero__brand brand" src="/img/fffood-brand-red.png" />
+			</div>
+			<div class="section__row">
+				<h1>Thinking Small</h1>
+				<p><strong>Our site’s launching soon.</strong>
+					<br>Want to talk in the meantime?</p>
+				<p><a class="button" href="https://wa.me/00447771535355">Click to chat</a></p>
+			</div>
+			<div class="section__row footer">
+				<a href="tel:07771535355">07771 535 355</a>
+			</div>
+		</section>
 		
 	</body>
 </html>
