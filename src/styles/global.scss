@@ -24,20 +24,70 @@ $accent: $colour-bubblegum-pink;
 html{
     height: 100%;
     background: #000000;
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-body{
-    height: 100%;
+.bg{
+
     background-color: $colour-butter-yellow;
     background-image: url(/img/bg.jpg);
     background-size: auto 100%;
-    background-position: center right;
+    background-position: top right;
     background-attachment: fixed;
     background-repeat: no-repeat;
+
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media (max-width: 850px) {
+        position: relative;
+        height: 130vw;
+        background-size: auto 130vw;
+        background-position: 43vw 0;
+    }
+
 }
 
 .brand{
     position: absolute;
-    top: 5vw;
+    bottom: 5vw;
     left: 5vw;
+    display: block;
+    width: 180px;
+}
+
+.holding{
+    width: 40%;
+    position: relative;
+    padding: 5vw;
+    @media (max-width: 850px) {
+        color: white;
+        width: auto;
+    }
+}
+
+a{
+    color: red;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+h1{
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 5vw;
 }
