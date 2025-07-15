@@ -1,0 +1,43 @@
+// fffood Brand Colour Palette
+$colour-butter-yellow: #FFE5A0;
+$colour-bubblegum-pink: #FF9EBB;
+$colour-bright-red: #F6002A;
+$colour-deep-brown: #3E2A1C;
+$colour-white: #ffffff;
+$colour-black: #000000;
+
+// Optional semantic naming
+$bg-primary: $colour-butter-yellow;
+$text-primary: $colour-deep-brown;
+$link-colour: $colour-bright-red;
+$accent: $colour-bubblegum-pink;
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+html{
+    height: 100%;
+    background: #000000;
+}
+
+body{
+    height: 100%;
+    background-color: $colour-butter-yellow;
+    background-image: url(/img/bg.jpg);
+    background-size: auto 100%;
+    background-position: center right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.brand{
+    position: absolute;
+    top: 5vw;
+    left: 5vw;
+}
