@@ -22,7 +22,7 @@ $break: 600px;
 
 html{
     height: 100%;
-    background: #111;
+    background: #222;
     color: white;
     line-height: 1.6;
     font-family: "Open Sans", sans-serif;
@@ -30,6 +30,11 @@ html{
     font-size: 1.1em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background-image: url(/img/tille.png);
+    background-attachment: fixed;
+
+
 }
 
 
@@ -82,7 +87,7 @@ p:not(:last-child){
 }
 
 .footer{
-    background: #111;
+   //  background: #111;
     text-align: right;
     display: flex;
     justify-content: space-between;
@@ -99,11 +104,12 @@ p:not(:last-child){
 .section{
 
     display: flex;
+    // display: none;
     flex-direction: column;
     max-width: 950px;
     margin: auto;
-    background: #000000;
-
+    
+    
     &__row{
 
         padding: $gutter*2;
@@ -116,6 +122,10 @@ p:not(:last-child){
 
         &--no-pad{
             padding: 0px;
+        }
+
+        &--black{
+            background-color: #000000;
         }
 
         @media (max-width: $break) {
