@@ -1,0 +1,18 @@
+@use "vars";
+
+.section{
+    &__inner{
+        padding: var(--gutter);
+        margin: auto;
+        max-width: 800px;
+    }
+    &--darkest{
+        background-color: #111;
+    }
+    &--dark{
+        background-color: #222;
+    }
+    &--butter{
+        background-color: vars.$colour-butter-yellow;
+    }
+}

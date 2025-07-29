@@ -1,0 +1,88 @@
+@use "vars";
+
+.form{
+
+    &__label{
+        display: none;
+    }
+
+    &__input{
+        &--textarea{
+            min-height: 200px;
+        }
+    }
+
+    &__fieldset{
+        border: 0;
+    }
+
+    &--contact{
+        .form__row{
+            display: block;
+        }
+        .form__input{
+            border-radius: vars.$radius;
+        }
+
+        .form__input--submit{
+            padding: var(--h-rule) 20px;
+        }
+
+    }
+    &--subscribe{
+
+        .form__fieldset{
+            display: flex;
+            flex-direction: row;
+
+            position: relative;
+            overflow: hidden;
+            border-radius: vars.$radius;
+        }
+
+        .form__row{ 
+            margin-bottom: 0;            
+            &--stretch{
+                flex: 1 1 auto; 
+            }
+        }
+
+        .form__input{
+            align-self: stretch;
+        }
+
+    }
+
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        appearance: none;
+        padding: var(--h-rule);
+        border: 0;
+        background-color: #333;
+        color: #ccc;
+        &--full{
+            width: 100%;
+        }
+        &--submit{
+            background-color: #666;
+            cursor: pointer;
+        }
+        &::placeholder{
+            color: #bbb;
+        }
+        &:hover{
+            background-color: #bbb;
+            color: #333;
+            cursor: pointer;
+            &::placeholder{
+                color: #333;
+            }
+        }
+        &:focus{
+            outline: none;
+            cursor: auto;
+        }
+    }
+
+}

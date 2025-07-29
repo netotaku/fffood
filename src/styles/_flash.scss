@@ -1,0 +1,16 @@
+@use "vars";
+
+.flash{
+    position: relative;
+    padding: var(--h-rule);
+    margin-bottom: var(--h-rule);
+    overflow: hidden;
+    border-radius: vars.$radius;
+    background-color: #666;
+    &--500{
+        background-color: vars.$colour-bright-red;
+    }
+    &--200{
+        background-color: vars.$colour-green;
+    }
+}

@@ -28,22 +28,36 @@ export async function handler(event) {
       body: body
     }
 
-    const response = await fetch(`https://api.emailoctopus.com/lists/${listId}/contacts`, request);
 
-    const data = await response.json();
 
-    if (!response.ok) {
-      console.error('EmailOctopus error response:', data);
-      return {
-        statusCode: response.status,
-        body: JSON.stringify({ error: data.error?.message || 'Unknown error' })
-      };
-    }
+    // const response = await fetch(`https://api.emailoctopus.com/lists/${listId}/contacts`, request);
+
+    // const data = await response.json();
+
+    // if (!response.ok) {
+    //   console.error('EmailOctopus error response:', data);
+    //   return {
+    //     statusCode: response.status,
+    //     body: JSON.stringify({ error: data.error?.message || 'Unknown error' })
+    //   };
+    // }
+
+    // return {
+    //   statusCode: 200,
+    //   body: JSON.stringify({ success: true, data })
+    // };
+
+    let data = {};
 
     return {
-      statusCode: 200,
-      body: JSON.stringify({ success: true, data })
+        statusCode: 200,
+        body: JSON.stringify({ 
+            success: true, 
+            data 
+        })
     };
+
+
   } catch (err) {
     console.error('Server error:', err);
     return {

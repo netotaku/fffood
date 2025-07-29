@@ -1,0 +1,21 @@
+$colour-butter-yellow: #FFE5A0;
+$colour-bubblegum-pink: #EF60AB;
+$colour-bright-red: #F6002A;
+$colour-deep-brown: #6C1F02;
+$colour-green: green;
+
+$bg-primary: $colour-butter-yellow;
+$text-primary: $colour-deep-brown;
+$link-colour: $colour-bright-red;
+$accent: $colour-bubblegum-pink;
+
+$radius: 8px;
+
+:root {
+    --h-rule: 14px;
+    --gutter: 50px;
+    @media (max-width: 600px) {
+        --gutter: 14px;
+    }
+}
+

@@ -21,40 +21,53 @@ switch(mode){
 
 ---
 
+
+
+
 <form id={`form-${salt}`} class:list={["js-form", "form", modifier]} name="contact" method="POST" netlify-honeypot="asdasdcakkkk2k2kk3" data-netlify="true" action="/success" autocomplete="off">
 
-    <input type="hidden" value={mode}>
+    <div class="js-flash flash flash--500 u-hidden">
+        <strong class="js-flash-heading"></strong><br>
+        <p class="js-flash-message"></p>
+    </div>
 
-    <p class="u-hidden">
-        <label ={`trap-${salt}`}><input id={`trap-${salt}`} name="asdasdcakkkk2k2kk3" /></label>
-    </p>
+    <fieldset class="form__fieldset">
 
-    {mode == "contact" && <p class="form__row"> 
-        <label class="form__label" for={`name-${salt}`}>Name</label>   
-        <input class="form__input form__input--full" id={`name-${salt}`} type="text" name="name" required placeholder="Name" />
-    </p>}
-    
+        <input type="hidden" value={mode}>
 
-    <p class="form__row form__row--stretch">  
-        <label class="form__label" for={`email-${salt}`}>Email</label>          
-        <input class="form__input form__input--full" id={`email-${salt}`} type="email" name="email" required placeholder="Email" />
-    </p>
+        <p class="u-hidden">
+            <label ={`trap-${salt}`}><input id={`trap-${salt}`} name="asdasdcakkkk2k2kk3" /></label>
+        </p>
 
-
-    {mode == "contact" && <p class="form__row">  
-            <label class="form__label" for={`message-${salt}`}>Message</label>            
-            <textarea class="form__input form__input--textarea form__input--full" id={`message-${salt}`} name="message" placeholder="Message"></textarea>
-        </p>     
+        {mode == "contact" && <p class="form__row"> 
+            <label class="form__label" for={`name-${salt}`}>Name</label>   
+            <input class="form__input form__input--full" id={`name-${salt}`} type="text" name="name" required placeholder="Name" />
+        </p>}
         
-        <p class="form__row">            
-            <label class="" for={`subscribe-${salt}`}>    
-                <input type="checkbox" id={`subscribe-${salt}`} name="subscribe" checked />
-                <span>Subscribe</span>
-            </label>
-        </p>}   
 
-    <p class="form__row">
-        <button class="form__input form__input--submit" type="submit">{buttonText}</button>
-    </p>
+        <p class="form__row form__row--stretch">  
+            <label class="form__label" for={`email-${salt}`}>Email</label>          
+            <input class="form__input form__input--full" id={`email-${salt}`} type="email" name="email" required placeholder="Email" />
+        </p>
+
+
+        {mode == "contact" && <p class="form__row">  
+                <label class="form__label" for={`message-${salt}`}>Message</label>            
+                <textarea class="form__input form__input--textarea form__input--full" id={`message-${salt}`} name="message" placeholder="Message"></textarea>
+            </p>     
+            
+            <p class="form__row">            
+                <label class="" for={`subscribe-${salt}`}>    
+                    <input type="checkbox" id={`subscribe-${salt}`} name="subscribe" checked />
+                    <span>Subscribe to our mailing list for occasional updates and useful digital tips.<br>
+                        <a href="">We respect your privacy</a></span>
+                </label>
+            </p>}   
+
+        <p class="form__row">
+            <button class="form__input form__input--submit" type="submit">{buttonText}</button>
+        </p>
+
+    </fieldset>
 
 </form>
