@@ -1,0 +1,158 @@
+$colour-butter-yellow: #FFE5A0;
+$colour-bubblegum-pink: #EF60AB;
+$colour-bright-red: #F6002A;
+$colour-deep-brown: #6C1F02;
+$colour-white: #ffffff;
+$colour-black: #000000;
+
+$bg-primary: $colour-butter-yellow;
+$text-primary: $colour-deep-brown;
+$link-colour: $colour-bright-red;
+$accent: $colour-bubblegum-pink;
+
+:root {
+    --gutter: 50px;
+    @media (max-width: 600px) {
+        --gutter: 12px;
+    }
+}
+
+a{
+    color: $colour-bubblegum-pink;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background: black;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.u-{
+    &hidden{
+        display: none;
+    }
+}
+
+.section{
+    &__inner{
+        padding: var(--gutter);
+        margin: auto;
+        max-width: 800px;
+    }
+    &--darkest{
+        background-color: #111;
+    }
+    &--dark{
+        background-color: #222;
+    }
+}
+
+
+.form{
+
+    &__label{
+        display: none;
+    }
+
+    &__input{
+        &--textarea{
+            min-height: 200px;
+        }
+    }
+
+    &--contact{
+        .form__row{
+            display: block;
+        }
+        .form__input{
+            border-radius: 8px;
+        }
+
+        .form__input--submit{
+            padding: 12px 20px;
+        }
+
+    }
+    &--subscribe{
+
+        display: flex;
+        flex-direction: row;
+
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+
+        .form__row{ 
+            margin-bottom: 0;            
+            &--stretch{
+                flex: 1 1 auto; 
+            }
+        }
+
+        .form__input{
+            align-self: stretch;
+        }
+
+    }
+
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        appearance: none;
+        padding: 12px;
+        border: 0;
+        background-color: #333;
+        color: #ccc;
+        &--full{
+            width: 100%;
+        }
+        &--submit{
+            background-color: #666;
+            cursor: pointer;
+        }
+        &::placeholder{
+            color: #bbb;
+        }
+        &:hover{
+            background-color: #bbb;
+            color: #333;
+            cursor: pointer;
+            &::placeholder{
+                color: #333;
+            }
+        }
+        &:focus{
+            outline: none;
+            cursor: auto;
+        }
+    }
+
+}
+
+
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote, form{
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+}
+

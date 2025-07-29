@@ -1,6 +1,7 @@
 ---
-import '../styles/global.scss';
+import '../styles/base.scss';
 import BaseHead from '../components/BaseHead.astro';
+import Form from '../components/Form.astro';
 ---
 
 <!doctype html>
@@ -11,21 +12,57 @@ import BaseHead from '../components/BaseHead.astro';
 			description="We give small businesses a confident digital presence" />		
 	</head>
 	<body>
+
 		<section class="section">
-			<div class="section__row hero">				
-				<img class="hero__brand brand" src="/img/fffood-brand-red.png" />
-			</div>
-			<div class="section__row section__row--black content">
-				<h1>Thinking Small</h1>
-				<p>
-					We give small businesses a confident digital presence. <br class="u-no-mobile">Smart, purposeful, affordable, and shaped by big brand thinking.</p>
-				<p><strong>Our site’s launching soon.</strong>
-					<br>Want to talk in the meantime?</p>
-				<p><a class="button" href="https://wa.me/447771535355"><i class="fa-brands fa-whatsapp"></i> Click to chat</a></p>
-			</div>
-			<div class="section__row footer">
-				<span>❤ Bristol, UK</span> <a href="mailto:desk@fffood.agency">desk@fffood.agency</a>
-			</div>
-		</section>
+			<div class="section__inner">				
+				<img class="brand" src="/img/fffood-brand-red.png" />	
+			  </div> <!-- /.section__inner -->
+		</section> <!-- /.section -->
+
+		<section class="section section--darkest">
+    		<div class="section__inner">
+				<h2>Subscribe</h2>
+				<Form mode="subscribe" salt="aslkdjnld" />
+				<p>Subscribe to our mailing list for occasional updates and useful digital tips.<br> 
+					<a href="#">We respect your privacy</a></p>
+  			</div> <!-- /.section__inner -->
+		</section> <!-- /.section -->
+
+		<section class="section section--dark">
+    		<div class="section__inner">
+				<h2>Get in touch</h2>
+				<Form mode="contact" salt="addddd" />
+		  	</div> <!-- /.section__inner -->
+		</section> <!-- /.section -->
+
+		<script>
+
+			const form = document.querySelector(".js-form");
+
+			form.addEventListener("submit", async (e) => {
+
+				e.preventDefault();
+				
+				const formData = new FormData(form);
+				const body = {
+				name: formData.get("name"),
+				email: formData.get("email"),
+				};
+
+				const response = await fetch("/.netlify/functions/emailOctopus", {
+				method: "POST",
+				body: JSON.stringify(body),
+				});
+
+				if (response.ok) {
+					alert("Thanks for your message!");
+				form.reset();
+				} else {
+					alert("Something went wrong. Please try again later.");
+				}
+			});
+
+		</script>
+
 	</body>
 </html>
