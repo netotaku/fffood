@@ -67,6 +67,10 @@
         &--submit{
             background-color: #666;
             cursor: pointer;
+            &:hover{
+                background-color: vars.$colour-bubblegum-pink!important;
+                color: white!important;
+            }            
         }
         &::placeholder{
             color: #bbb;

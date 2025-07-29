@@ -26,14 +26,14 @@ switch(mode){
 
 <form id={`form-${salt}`} class:list={["js-form", "form", modifier]} name="contact" method="POST" netlify-honeypot="asdasdcakkkk2k2kk3" data-netlify="true" action="/success" autocomplete="off">
 
-    <div class="js-flash flash flash--500 u-hidden">
+    <div class="js-flash flash u-hidden">
         <strong class="js-flash-heading"></strong><br>
         <p class="js-flash-message"></p>
     </div>
 
     <fieldset class="form__fieldset">
 
-        <input type="hidden" value={mode}>
+        <input type="hidden" name="mode" value={mode}>
 
         <p class="u-hidden">
             <label ={`trap-${salt}`}><input id={`trap-${salt}`} name="asdasdcakkkk2k2kk3" /></label>

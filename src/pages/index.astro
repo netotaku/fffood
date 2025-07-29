@@ -55,14 +55,15 @@ import Form from '../components/Form.astro';
 			forms.forEach((form) => {
 				form.addEventListener("submit", async (e) => {
 
-					e.preventDefault();
-
-					console.log(form.id)
+					e.preventDefault()
 					
 					const formData = new FormData(form);
 					const body = {
 						name: formData.get("name"),
 						email: formData.get("email"),
+						message: formData.get("message"),
+						mode: formData.get("mode"),
+						subscribe: formData.get("subscribe")
 					};
 
 					const response = await fetch("/.netlify/functions/emailOctopus", {
@@ -70,11 +71,31 @@ import Form from '../components/Form.astro';
 						body: JSON.stringify(body),
 					});
 
+					let flash: Element = form.querySelector('.js-flash')!
+					let heading: Element = flash.querySelector('.js-flash-heading')!
+					let message: Element = flash.querySelector('.js-flash-message')!
+					let mode = formData.get("mode")
+
 					if (response.ok) {
-						alert("Thanks for your message!");
+
+						flash.classList.remove('u-hidden');
+						flash.classList.add('flash--200');
+
+						if(mode == "subscribe"){
+							heading.innerHTML = "Thank you for your subscription"
+							message.innerHTML = "You can remove yourself at any time by following to unsubscribe link in the emails."
+						} else {
+							heading.innerHTML = "Thank you for your enquiry"
+							message.innerHTML = "We'll be in contact shortly."
+						}
+						
 						form.reset();
+
 					} else {
-						alert("Something went wrong. Please try again later.");
+						flash.classList.remove('u-hidden');
+						flash.classList.add('flash--500');
+						heading.innerHTML = "Something went wrong"
+						message.innerHTML = "Please try again later."					
 					}
 				});
 			})
