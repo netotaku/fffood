@@ -1,7 +1,8 @@
 ---
 import '../styles/base.scss';
 import BaseHead from '../components/BaseHead.astro';
-import Form from '../components/Form.astro';
+// import Form from '../components/Form.astro';
+import Form from '../components/Form.vue';
 ---
 
 <!doctype html>
@@ -13,16 +14,19 @@ import Form from '../components/Form.astro';
 	</head>
 	<body>
 
+		
+		
+
 		<section class="section section--butter">
 			<div class="section__inner">				
 				<img class="brand" src="/img/fffood-brand-red.png" />	
-			  </div> <!-- /.section__inner -->
+			</div> <!-- /.section__inner -->
 		</section> <!-- /.section -->
 
 		<section class="section section--darkest">
     		<div class="section__inner">
 				<h2>Subscribe</h2>
-				<Form mode="subscribe" salt="aslkdjnld" />
+				<Form client:load mode="subscribe" salt="aaa" />
 				<p>Subscribe to our mailing list for occasional updates and useful digital tips.<br> 
 					<a href="#">We respect your privacy</a></p>
   			</div> <!-- /.section__inner -->
@@ -31,7 +35,7 @@ import Form from '../components/Form.astro';
 		<section class="section section--dark">
     		<div class="section__inner">
 				<h2>Get in touch</h2>
-				<Form mode="contact" salt="addddd" />
+				<Form client:load mode="contact" salt="bbb" />
 		  	</div> <!-- /.section__inner -->
 		</section> <!-- /.section -->
 

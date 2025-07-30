@@ -35,9 +35,6 @@ switch(mode){
 
         <input type="hidden" name="mode" value={mode}>
 
-        <p class="u-hidden">
-            <label ={`trap-${salt}`}><input id={`trap-${salt}`} name="asdasdcakkkk2k2kk3" /></label>
-        </p>
 
         {mode == "contact" && <p class="form__row"> 
             <label class="form__label" for={`name-${salt}`}>Name</label>   
@@ -64,9 +61,7 @@ switch(mode){
                 </label>
             </p>}   
 
-        <p class="form__row">
-            <button class="form__input form__input--submit" type="submit">{buttonText}</button>
-        </p>
+
 
     </fieldset>
 
