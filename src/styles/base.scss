@@ -7,6 +7,7 @@
 @use "typography";
 @use "brand";
 @use "hero";
+@use "button";
 
 a{
     color: vars.$colour-bubblegum-pink;
@@ -28,6 +29,12 @@ html, body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: "Open Sans", sans-serif;
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+body{
+    background-color: #222;
+    background-image: url(/img/tille.png);
+    background-attachment: fixed;
 }

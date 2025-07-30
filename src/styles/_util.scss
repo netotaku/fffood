@@ -1,5 +1,15 @@
+@use "vars";
+
 .u-{
     &hidden{
         display: none;
+    }
+    &no-mobile{
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+    &red{
+        color: vars.$colour-bright-red;
     }
 }

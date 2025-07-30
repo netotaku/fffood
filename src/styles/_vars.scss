@@ -12,10 +12,10 @@ $accent: $colour-bubblegum-pink;
 $radius: 8px;
 
 :root {
-    --h-rule: 14px;
+    --h-rule: 20px;
     --gutter: 50px;
     @media (max-width: 600px) {
-        --gutter: 14px;
+        --gutter: 20px;
     }
 }
 

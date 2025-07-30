@@ -1,42 +1,44 @@
 ---
 import '../styles/base.scss';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Form from '../components/Form.vue';
+import Calculator from '../components/Calculator.vue';
+import BaseLayout from '../layouts/base.astro'
 ---
+<BaseLayout
+	title="fffood" 
+	description="We give small businesses a confident digital presence">
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead 
-			title="fffood" 
-			description="We give small businesses a confident digital presence" />		
-	</head>
-	<body>
+	<section class="section section--darkest">
+		<div class="section__inner">
+			<h1>Thinking Small</h1>
+			<p><strong>We give small businesses a confident digital presence.</strong><br class="u-no-mobile">
+			Smart, purposeful, affordable, and shaped by big brand thinking.</p>
+			<p><a class="button" href="https://wa.me/447771535355">
+				<i class="fa-brands fa-whatsapp"></i> Click to chat</a></p>
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
 
-		<section class="section section--butter hero">
-			<div class="section__inner">				
-				<img class="brand" src="/img/fffood-brand-red.png" />	
-			</div> <!-- /.section__inner -->
-		</section> <!-- /.section -->
+	<section class="section section--lightest">
+		<div class="section__inner">	
+			<h2>Rate Card</h2>			
+			<Calculator client:load />				
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
 
-		<section class="section section--darkest">
-    		<div class="section__inner">
-				<h2>Subscribe</h2>
-				<Form client:load mode="subscribe" salt="aaa" />
-				<p>Subscribe to our mailing list for occasional updates and useful digital tips.<br> 
-					<a href="#">We respect your privacy</a></p>
-  			</div> <!-- /.section__inner -->
-		</section> <!-- /.section -->
+	<section class="section section--darkest">
+		<div class="section__inner">
+			<h2>Subscribe</h2>
+			<Form client:load mode="subscribe" salt="aaa" />
+			<p>Subscribe for occasional updates and useful digital tips.<br> 
+				<a href="#">We respect your privacy</a></p>
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
 
-		<section class="section section--dark">
-    		<div class="section__inner">
-				<h2>Get in touch</h2>
-				<Form client:load mode="contact" salt="bbb" />
-		  	</div> <!-- /.section__inner -->
-		</section> <!-- /.section -->
+	<section class="section section--dark">
+		<div class="section__inner">
+			<h2>Get in touch</h2>
+			<Form client:load mode="contact" salt="bbb" />
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
 
-		<Footer />
-
-	</body>
-</html>
+</BaseLayout>

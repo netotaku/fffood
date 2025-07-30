@@ -25,7 +25,7 @@
         }
 
         .form__input--submit{
-            padding: var(--h-rule) 20px;
+            padding: var(--h-rule) 26px;
         }
 
     }
@@ -66,11 +66,12 @@
             width: 100%;
         }
         &--submit{
-            background-color: #666;
+            background-color: vars.$colour-bubblegum-pink;
+            color: white!important;
             cursor: pointer;
             &:hover{
-                background-color: vars.$colour-bubblegum-pink!important;
-                color: white!important;
+                background-color: #666!important;
+                
             }            
         }
         &::placeholder{

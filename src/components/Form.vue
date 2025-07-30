@@ -45,7 +45,7 @@
                 <p class="form__row">            
                     <label class="">    
                         <input v-model="form.subscribe" type="checkbox" name="subscribe" checked />&nbsp;
-                        <span>Subscribe to our mailing list for occasional updates and useful digital tips.<br>
+                        <span>Subscribe for occasional updates and useful digital tips.<br>
                             <a href="">We respect your privacy</a></span>
                     </label>
                 </p>
