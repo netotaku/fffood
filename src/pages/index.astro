@@ -1,7 +1,7 @@
 ---
 import '../styles/base.scss';
 import BaseHead from '../components/BaseHead.astro';
-// import Form from '../components/Form.astro';
+import Footer from '../components/Footer.astro';
 import Form from '../components/Form.vue';
 ---
 
@@ -14,10 +14,7 @@ import Form from '../components/Form.vue';
 	</head>
 	<body>
 
-		
-		
-
-		<section class="section section--butter">
+		<section class="section section--butter hero">
 			<div class="section__inner">				
 				<img class="brand" src="/img/fffood-brand-red.png" />	
 			</div> <!-- /.section__inner -->
@@ -39,72 +36,7 @@ import Form from '../components/Form.vue';
 		  	</div> <!-- /.section__inner -->
 		</section> <!-- /.section -->
 
-		<section class="section">
-    		<div class="section__inner footer">
-				<ul>
-					<li><a href="tel:07771535355">07771 535 355</a></li>
-					<li><a href="mailto:desk@fffood.agency">desk@fffood.agency</a></li>
-				</ul>
-				<ul>
-					<li><a href="/privacy-and-cookies">Privacy &amp; Cookies</a></li>				
-				</ul>
-		  	</div> <!-- /.section__inner -->
-		</section> <!-- /.section -->
-
-
-		<script>
-
-			const forms = document.querySelectorAll(".js-form") as NodeListOf<HTMLFormElement> ;
-
-			forms.forEach((form) => {
-				form.addEventListener("submit", async (e) => {
-
-					e.preventDefault()
-					
-					const formData = new FormData(form);
-					const body = {
-						name: formData.get("name"),
-						email: formData.get("email"),
-						message: formData.get("message"),
-						mode: formData.get("mode"),
-						subscribe: formData.get("subscribe")
-					};
-
-					const response = await fetch("/.netlify/functions/emailOctopus", {
-						method: "POST",
-						body: JSON.stringify(body),
-					});
-
-					let flash: Element = form.querySelector('.js-flash')!
-					let heading: Element = flash.querySelector('.js-flash-heading')!
-					let message: Element = flash.querySelector('.js-flash-message')!
-					let mode = formData.get("mode")
-
-					if (response.ok) {
-
-						flash.classList.remove('u-hidden');
-						flash.classList.add('flash--200');
-
-						if(mode == "subscribe"){
-							heading.innerHTML = "Thank you for your subscription"
-							message.innerHTML = "You can remove yourself at any time by following to unsubscribe link in the emails."
-						} else {
-							heading.innerHTML = "Thank you for your enquiry"
-							message.innerHTML = "We'll be in contact shortly."
-						}
-						
-						form.reset();
-
-					} else {
-						flash.classList.remove('u-hidden');
-						flash.classList.add('flash--500');
-						heading.innerHTML = "Something went wrong"
-						message.innerHTML = "Please try again later."					
-					}
-				});
-			})
-
-		</script>
+		<Footer />
 
 	</body>
 </html>

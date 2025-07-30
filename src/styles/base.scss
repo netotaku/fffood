@@ -6,8 +6,7 @@
 @use "section";
 @use "typography";
 @use "brand";
-
-
+@use "hero";
 
 a{
     color: vars.$colour-bubblegum-pink;
@@ -15,7 +14,6 @@ a{
         text-decoration: none;
     }
 }
-
 
 *{
     padding: 0;
@@ -33,24 +31,3 @@ html, body{
     font-size: 1em;
     line-height: 1.4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -128,17 +128,13 @@
 
         } catch (err: any) {
 
-            // console.log('error fired')
-
             flash.show = true
             flash.heading = err.message 
             flash.message = "Submission failed. Please try again later or email us on <a href='mailto:desk@fffood.agency'>desk@fffood.agency</a>"                
             flash.modifier = "flash--500"
 
-        } finally {   
-
-
-        }
+        } 
+        
     };
 
 </script>

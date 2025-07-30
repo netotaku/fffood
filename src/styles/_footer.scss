@@ -1,5 +1,20 @@
+@use "vars";
+
 .footer{
     a{
         color: #ccc;
+    }
+    &__link{
+        &--lrg{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 1.6em;
+            font-weight: bold;
+            font-family: "Oswald", sans-serif;
+            &:hover{
+                color: vars.$colour-bubblegum-pink;
+            }
+        }        
     }
 }
