@@ -2,51 +2,71 @@
         {    
             "label": "Discovery",
             "price": 850,
-            "description": "We get to know your business, goals, and audience — then plan what you really need."
+            "description": "We get to know your business, goals, and audience — then plan what you really need.",
+            "added": true,
+            "required": true
         },
         {   
             "label": "Branding",
             "price": 600,
-            "description": "Logo, colours and simple identity work to help you look consistent and considered."
+            "description": "Logo, colours and simple identity work to help you look consistent and considered.",
+            "added": false,
+            "required": false
         },
         {   
             "label": "Website",
             "price": 950,
-            "description": "A clean, fast site with your brand and content — easy to update and built to last."
+            "description": "A clean, fast site with your brand and content — easy to update and built to last.",
+            "added": false,
+            "required": false
         },
         {
             "label": "SEO",
             "price": 400,
-            "description": "We make sure your site can be found by local customers and search engines alike."
+            "description": "We make sure your site can be found by local customers and search engines alike.",
+            "added": false,
+            "required": false
         },
         {   
             "label": "Email",
             "price": 300,
-            "description": "Templates, tools and guidance for sending great-looking emails and newsletters."
+            "description": "Templates, tools and guidance for sending great-looking emails and newsletters.",
+            "added": false,
+            "required": false
         },
         {   
             "label": "CRM",
             "price": 500,
-            "description": "We help you pick and set up the right customer database, with training included."
+            "description": "We help you pick and set up the right customer database, with training included.",
+            "added": false,
+            "required": false
         },
         {
             "label": "Content",
             "price": 300,
-            "description": "Social media graphics, planning templates and advice to help you post with purpose."
+            "description": "Social media graphics, planning templates and advice to help you post with purpose.",
+            "added": false,
+            "required": false
         },
         {
             "label": "Workspace + Domain",
             "price": 150,
-            "description": "Get set up with professional email, domain, and cloud tools like Google Workspace."
+            "description": "Get set up with professional email, domain, and cloud tools like Google Workspace.",
+            "added": false,
+            "required": false
         },
         {
             "label": "Paid Media",
             "price": 250,
-            "description": "Simple social or search ad setup to help you get seen while staying in control of spend."
+            "description": "Simple social or search ad setup to help you get seen while staying in control of spend.",
+            "added": false,
+            "required": false
         },
         {
             "label": "Training",
             "price": 100,
-            "description": "One-to-one or team sessions on content, websites, tools, or AI — tailored to you."
+            "description": "One-to-one or team sessions on content, websites, tools, or AI — tailored to you.",
+            "added": false,
+            "required": false
         }
     ]

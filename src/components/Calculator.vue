@@ -50,8 +50,19 @@
                             <i class="fa-solid fa-plus"></i> Add</a>
                     </div>
                     <div class="calculator__nav">
-                        <a class="button button--bubblegum button--disabled" href="#" @click.prevent="navigate(-1)"><i class="fa-solid fa-chevron-left"></i></a>&nbsp;
-                        <a class="button button--bubblegum" href="#" @click.prevent="navigate(1)"><i class="fa-solid fa-chevron-right"></i></a>
+
+                        <a :class="`button button--bubblegum ${p_modifier}`" 
+                            href="#" 
+                            @click.prevent="navigate(-1)">
+                                <i class="fa-solid fa-chevron-left"></i></a>
+                        
+                        &nbsp;
+
+                        <a :class="`button button--bubblegum ${n_modifier}`" 
+                            href="#" 
+                            @click.prevent="navigate(1)">
+                                <i class="fa-solid fa-chevron-right"></i></a>
+
                     </div>
                 </div>
 
@@ -69,9 +80,9 @@
     const cursor = ref(0)
     const total = ref(0)
 
+    const p_modifier = ref('button--disabled');
     const n_modifier = ref('');
-    const p_modifier = ref('');
-
+    
     const slide = reactive({
         cursor: 0,
         heading: "",
@@ -100,6 +111,8 @@
         label: string;
         description: string;
         price: number;
+        added: boolean;
+        required: boolean;
     };
 
     function nextSlide(s: s){
@@ -113,11 +126,16 @@
 
         cursor.value += next
 
+        n_modifier.value = ""
+        p_modifier.value = ""
+
         if(cursor.value >= slides.length){
+            n_modifier.value = "button--disabled"
             cursor.value--
         }
         
         if(cursor.value <= 0){
+            p_modifier.value = "button--disabled"
             cursor.value++
         }
         
