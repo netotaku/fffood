@@ -1,0 +1,43 @@
+@use "vars";
+
+.nav{
+    position: fixed;    
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    
+    &__inner{        
+        max-width: vars.$max-width;        
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+        margin: auto;
+    }
+
+    &__bar{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        background-color: rgba(0,0,0,.6);
+        margin-top: var(--h-rule);
+        line-height: 1;
+    }
+
+
+    &__links{
+        display: flex;
+        a{
+            display: block;
+            padding: var(--h-rule);
+            color: white;
+            text-decoration: none;
+        }
+    }
+    
+    &__contact{
+        background-color: vars.$colour-green;
+    }
+}

@@ -1,6 +1,10 @@
 @use "vars";
 
 .footer{
+
+    display: flex;
+    justify-content: space-between;
+
     a{
         color: #ccc;
     }
@@ -17,4 +21,9 @@
             }
         }        
     }
+
+    &__right{
+        text-align: right;
+    }
+
 }

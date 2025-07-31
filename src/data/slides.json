@@ -1,6 +1,6 @@
 [
         {    
-            "label": "Discovery",
+            "label": "Research",
             "price": 850,
             "description": "We get to know your business, goals, and audience — then plan what you really need.",
             "added": true,
@@ -21,7 +21,7 @@
             "required": false
         },
         {
-            "label": "SEO",
+            "label": "Search",
             "price": 400,
             "description": "We make sure your site can be found by local customers and search engines alike.",
             "added": false,
@@ -35,7 +35,7 @@
             "required": false
         },
         {   
-            "label": "CRM",
+            "label": "Marketing",
             "price": 500,
             "description": "We help you pick and set up the right customer database, with training included.",
             "added": false,
@@ -56,7 +56,7 @@
             "required": false
         },
         {
-            "label": "Paid Media",
+            "label": "Ads",
             "price": 250,
             "description": "Simple social or search ad setup to help you get seen while staying in control of spend.",
             "added": false,

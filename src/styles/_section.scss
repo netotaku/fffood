@@ -2,7 +2,7 @@
 
 .section{
 
-    max-width: 900px;
+    max-width: vars.$max-width;
     margin: auto;
 
     &__inner{

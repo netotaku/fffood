@@ -1,10 +1,16 @@
 .hero{
-    background-image: url(/img/bg.jpg);
-    min-height: 550px;
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: auto 850px;
-    @media (max-width: 800px) {
-        background-size: auto 100%;
+
+    min-height: 450px;
+
+    &--home{
+        background-image: url(/img/bg.jpg);
+        min-height: 550px;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: auto 850px;
+        @media (max-width: 800px) {
+            background-size: auto 100%;
+        }
     }
+    
 }

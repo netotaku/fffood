@@ -5,7 +5,7 @@
         <section class="section section--lightest">
             <div class="section__inner">	
 
-                <h1><span class="calculator__cursor">{{cursor+1}}.</span> {{ slide.heading }}</h1>
+                <h1>{{ slide.heading }}</h1>
                 <p v-html="slide.description"></p>
                  <p><small>
                     <em>Prices do not include VAT</em></small></p>
