@@ -6,6 +6,13 @@
     right: 0px;
     top: 0px;
     z-index: 1;
+
+    a{
+        color: white;
+        display: block;
+        text-decoration: none;            
+        font-weight: bold;
+    }
     
     &__inner{        
         max-width: vars.$max-width;        
@@ -17,27 +24,54 @@
     &__bar{
         display: flex;
         justify-content: end;
-        align-items: center;
+        align-items: center;                
         position: relative;
         overflow: hidden;
         border-radius: 30px;
-        background-color: rgba(0,0,0,.6);
-        margin-top: var(--h-rule);
+        background-color: rgba(0,0,0,.4);        
         line-height: 1;
+        backdrop-filter: blur(10px);
+        margin-top: 30px;
+        height: 59px;
     }
 
 
     &__links{
-        display: flex;
-        a{
-            display: block;
-            padding: var(--h-rule);
-            color: white;
-            text-decoration: none;
-        }
+        display: flex;     
+        margin: 0px!important;
+          
+        a{            
+            padding: var(--h-rule) 14px;
+            &:hover{
+                background-color: vars.$colour-bubblegum-pink;
+            }
+        }  
+        @media (max-width: 910px){
+            display: none;
+        }      
     }
     
-    &__contact{
+    &__contact{    
+        display: flex;
+        align-self: stretch; /* default, but explicit is good */
+        height: auto!important; /* ensures it expands to parent’s height */  
+        align-content: center;
+        text-align: center;
         background-color: vars.$colour-green;
+        font-size: 2em;
+        padding: 0px!important;  
+        width: 70px;
+        padding-right: 6px!important;
+        height: 100%;
+        &:hover{
+            background-color: vars.$colour-bubblegum-pink;
+        }      
+    }
+
+    &__brand{
+        position: absolute;
+        z-index: 1;        
+        margin-top: -17px;
+        margin-left: 10px;
     }
 }

@@ -26,4 +26,12 @@
         text-align: right;
     }
 
+    @media (max-width: 600px) {
+        flex-direction: column-reverse;
+        &__right{
+            margin-bottom: var(--h-rule);
+            text-align: left;
+        }
+    }
+
 }

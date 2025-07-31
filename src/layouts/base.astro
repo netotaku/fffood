@@ -20,15 +20,21 @@ const { title, description } = Astro.props;
 	<body>
         <nav class="nav">
             <div class="nav__inner">
+                <a href="/">
+                    <img class="nav__brand brand" src="/img/fffood-brand-red.png">
+                </a>
                 <div class="nav__bar">
-                    <!-- <a href="/">
-                        <img class="brand" src="/img/fffood-brand-red.png">
-                    </a> -->
+                    
                     <ul class="nav__links">
-                        <Links />
-                        <li><a class="nav__contact" href="/contact">
-                            <i class="fa-brands fa-whatsapp"></i></a></li>
+                        <Links />                        
                     </ul>
+
+                    <a class="nav__burger" href="/contact">
+                        <i class="fa-solid fa-burger"></i>
+                    </a>
+
+                    <a class="nav__contact" href="/contact">
+                            <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </nav>
