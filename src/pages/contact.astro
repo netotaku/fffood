@@ -1,0 +1,18 @@
+---
+import '../styles/base.scss';
+import Form from '../components/Form.vue';
+import BaseLayout from '../layouts/base.astro'
+---
+<BaseLayout
+	title="fffood / Contact us" 
+	description="Let's talk!"
+    subscribe={false}>
+
+	<section class="section section--dark">
+		<div class="section__inner">
+			<h2>Get in touch</h2>
+			<Form client:load mode="contact" salt="bbb" />
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+
+</BaseLayout>

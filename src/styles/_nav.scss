@@ -5,7 +5,7 @@
     left: 0px;
     right: 0px;
     top: 0px;
-    z-index: 1;
+    z-index: 2;
 
     a{
         color: white;
@@ -51,20 +51,46 @@
         }      
     }
     
-    &__contact{    
-        display: flex;
-        align-self: stretch; /* default, but explicit is good */
-        height: auto!important; /* ensures it expands to parent’s height */  
-        align-content: center;
-        text-align: center;
-        background-color: vars.$colour-green;
-        font-size: 2em;
-        padding: 0px!important;  
-        width: 70px;
-        padding-right: 6px!important;
+    &__button{  
+
+        padding: 0px;
+
+        display: block;
+        // align-self: stretch; /* default, but explicit is good */
         height: 100%;
-        &:hover{
+        padding-top: 15px;
+        // justify-content: center;
+        // align-items: center; 
+        text-align: center;                                     
+        font-weight: normal;
+
+        font-size: 1.4em;
+        
+        &--burger{
+            display: none!important;
             background-color: vars.$colour-bubblegum-pink;
+            
+            width: 60px;
+            @media (max-width: 900px){
+                display: block!important;
+            }  
+        }
+        &--contact{
+            background-color: vars.$colour-green;
+              
+            width: 70px;
+            padding-right: 6px!important;
+            
+            @media (max-width: 600px){
+                font-size: 1.5em;
+            }  
+        }
+
+        
+        &:hover{
+            @media (max-width: 600px){
+                background-color: vars.$colour-bubblegum-pink;
+            }            
         }      
     }
 

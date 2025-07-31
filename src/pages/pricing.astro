@@ -1,0 +1,10 @@
+---
+import '../styles/base.scss';
+import Calculator from '../components/Calculator.vue';
+import BaseLayout from '../layouts/base.astro'
+---
+<BaseLayout
+	title="fffood / Rates and Pricing" 
+	description="How much does it cost">
+    <Calculator client:load />	
+</BaseLayout>

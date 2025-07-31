@@ -1,11 +1,15 @@
 ---
 import '../styles/base.scss';
 import BaseHead from '../components/BaseHead.astro';
+import Form from '../components/Form.vue';
 import Links from '../components/Links.astro';
+import Burger from '../components/Burger.vue';
 
 interface Props {
 	title: string;
 	description: string;
+    hero?: string;
+    subscribe?: boolean;
 }
 const { title, description } = Astro.props;
 ---
@@ -18,6 +22,7 @@ const { title, description } = Astro.props;
 			description={description} />		
 	</head>
 	<body>
+        <div id="js-overlay"></div>
         <nav class="nav">
             <div class="nav__inner">
                 <a href="/">
@@ -29,11 +34,9 @@ const { title, description } = Astro.props;
                         <Links />                        
                     </ul>
 
-                    <a class="nav__burger" href="/contact">
-                        <i class="fa-solid fa-burger"></i>
-                    </a>
+                    <Burger client:only="vue" />
 
-                    <a class="nav__contact" href="/contact">
+                    <a class="nav__button nav__button--contact" href="/contact">
                             <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
@@ -45,6 +48,15 @@ const { title, description } = Astro.props;
         </section> <!-- /.section -->
 
         <slot />
+
+        <section class="section section--darkest">
+            <div class="section__inner">
+                <h2>Subscribe</h2>
+                <Form client:load mode="subscribe" salt="aaa" />
+                <p>Subscribe for occasional updates and useful digital tips.<br> 
+                    <a href="#">We respect your privacy</a></p>
+            </div> <!-- /.section__inner -->
+        </section> <!-- /.section -->
 
         <section class="section">
             <div class="section__inner footer">
@@ -67,6 +79,6 @@ const { title, description } = Astro.props;
 
             </div> <!-- /.section__inner -->
         </section> <!-- /.section -->
-		
+
 	</body>
 </html>
