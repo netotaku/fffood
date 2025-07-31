@@ -7,32 +7,37 @@
 
                 <span class="calculator__cursor">{{cursor+1}}.</span>
 
-                <h2>{{ slide.heading }}</h2>
+                <h1>{{ slide.heading }}</h1>
                 <p v-html="slide.description"></p>
 
                 <div class="well">
                     <table class="table">
                         <thead>
                             <tr>
+                                <td class="table__cell table__cell--center table__cell--slim"><span class="round round--disabled"><i class="fa-solid fa-check"></i></span></td>
                                 <th>Task</th>
-                                <th class="table__slim">Price</th>
-                                <th class="table__slim"></th>
+                                <th class="table__cell table__cell--right">Price</th>                                
                             </tr>
                         </thead>   
                         <tbody>
                             <tr v-for="(item, i) in basket">
+                                <td class="table__cell table__cell--center table__cell--slim">
+                                    
+                                    <a v-if="!slides[item].required" class="round" @click.prevent="remove(i)" href="#">
+                                        <i class="fa-solid fa-minus"></i></a>
+                                    <span v-else class="round round--green">
+                                        <i class="fa-solid fa-check"></i></span>
+                                    
+                                </td>
                                 <td>{{ slides[item].label }}</td>
-                                <td>£{{ slides[item].price }}</td>
-                                <td class="table__slim table__actions">
-                                    <a class="round" @click.prevent="remove(i)" href="#">
-                                        <i class="fa-solid fa-minus"></i></a></td>
+                                <td class="table__cell table__cell--right">£{{ slides[item].price }}</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>                                                
+                                <td class="table__cell table__cell--center table__cell--slim"></td>
                                 <td>Total</td>
-                                <td class="table__slim">£{{ total }}</td>                        
-                                <td class="table__slim"></td>
+                                <td class="table__cell table__cell--right">£{{ total }}</td>                        
                             </tr>
                         </tfoot>
                     </table>
@@ -46,8 +51,11 @@
 
                 <div class="calculator__action">
                     <div class="calculator__nav">
-                        <a class="button" href="#" @click.prevent="add(slide.cursor)">
-                            <i class="fa-solid fa-plus"></i> Add</a>
+                        <a  class="button" 
+                            :class="{ 'button--disabled': added }"
+                            href="#" 
+                            @click.prevent="add(slide.cursor)">
+                                <i class="fa-solid fa-plus"></i> Add</a>
                     </div>
                     <div class="calculator__nav">
 
@@ -82,7 +90,8 @@
 
     const p_modifier = ref('button--disabled');
     const n_modifier = ref('');
-    
+    const added = ref(false)
+     
     const slide = reactive({
         cursor: 0,
         heading: "",
@@ -95,12 +104,19 @@
 
     const basket = reactive([0])    
 
-    function add(i: number){        
-        basket.push(i)
-        total.value = 0
-        basket.forEach(item => {
-            total.value += slides[item].price
-        })
+    function add(i: number){
+        
+        if(!slides[i].added){
+            basket.push(i)
+            total.value = 0
+            basket.forEach(item => {
+                total.value += slides[item].price
+            })
+
+            slides[i].added = true
+            added.value = true
+        }
+
     }
 
     function remove(i: number){
@@ -120,6 +136,9 @@
         slide.heading = s.label
         slide.description = s.description
         slide.price = s.price
+        slide.added = s.added
+
+        added.value = slide.added
     }
 
     function navigate(next: number){
@@ -136,7 +155,7 @@
         
         if(cursor.value <= 0){
             p_modifier.value = "button--disabled"
-            cursor.value++
+            cursor.value = 0
         }
         
         nextSlide(slides[cursor.value])

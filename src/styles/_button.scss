@@ -18,28 +18,59 @@
 
     cursor: pointer;
 
-    &:hover{
-        background: vars.$colour-bubblegum-pink;
-    }
+
 
     &--bubblegum{
-        background: vars.$colour-bubblegum-pink; 
+        background: vars.$colour-bubblegum-pink;     
         &:hover{
-            background: vars.$colour-green;
-        }   
+            @media (min-width: 600px) {
+                background: vars.$colour-green!important;              
+            }
+        }
     }
 
     &--disabled{
         background: vars.$colour-off-cream-light;
+        &:hover{
+            @media (min-width: 600px) {
+                background: vars.$colour-off-cream-light!important;  
+            }
+        }
     }
+
+    
+    &:hover{
+        @media (min-width: 600px) {
+            background: vars.$colour-bubblegum-pink;
+        }
+    }
+
 }
 
 .round{
+    text-decoration: none;
+    display: flex;
     background: red;
     color: white;
-    padding: 3px 8px;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: auto;
+    
     border-radius: 50%;
+    font-size: .6em; 
+   
     &:hover{
-        background: #666;
+        @media (min-width: 600px) {
+            background: vars.$colour-off-cream-light;
+        }
+    }   
+    &--disabled{
+        background: vars.$colour-off-cream-light;
+    }
+    &--green{
+        background: vars.$colour-green;
     }
 }
