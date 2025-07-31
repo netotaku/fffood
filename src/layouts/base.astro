@@ -34,7 +34,9 @@ const { title, description } = Astro.props;
                         <Links />                        
                     </ul>
 
-                    <Burger client:only="vue" />
+                    <Burger client:only="vue">
+                        <Links />                          
+                    </Burger>
 
                     <a class="nav__button nav__button--contact" href="/contact">
                             <i class="fa-brands fa-whatsapp"></i></a>

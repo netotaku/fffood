@@ -7,8 +7,6 @@ function toggle() {
   isOpen.value = !isOpen.value
 }
 
-console.log("burger")
-
 </script>
 
 <template>
@@ -18,15 +16,14 @@ console.log("burger")
     href="#"
     @click.prevent="toggle"
   >
-    <i class="fa-solid fa-burger"></i>
+    <i v-if="!isOpen" class="fa-solid fa-burger"></i>
+    <i v-else class="fa-solid fa-xmark"></i>    
   </a>
 
   <Teleport to="#js-overlay">
     <nav v-if="isOpen" class="overlay" @click.self="toggle">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <slot />
       </ul>
     </nav>
   </Teleport>
