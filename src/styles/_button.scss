@@ -10,11 +10,36 @@
     overflow: hidden;
     border-radius: 30px;
     font-weight: 700;
+
+    font-size: inherit;
+    font-family: inherit;
+
+    border: 0;
+
+    cursor: pointer;
+
     &:hover{
         background: vars.$colour-bubblegum-pink;
     }
 
+    &--bubblegum{
+        background: vars.$colour-bubblegum-pink; 
+        &:hover{
+            background: vars.$colour-green;
+        }   
+    }
+
     &--disabled{
-        background: #ccc;
+        background: vars.$colour-off-cream-light;
+    }
+}
+
+.round{
+    background: red;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 50%;
+    &:hover{
+        background: #666;
     }
 }

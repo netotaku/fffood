@@ -50,8 +50,8 @@
                             <i class="fa-solid fa-plus"></i> Add</a>
                     </div>
                     <div class="calculator__nav">
-                        <a class="button" href="#" @click.prevent="navigate(-1)"><i class="fa-solid fa-chevron-left"></i></a>&nbsp;
-                        <a class="button" href="#" @click.prevent="navigate(1)"><i class="fa-solid fa-chevron-right"></i></a>
+                        <a class="button button--bubblegum button--disabled" href="#" @click.prevent="navigate(-1)"><i class="fa-solid fa-chevron-left"></i></a>&nbsp;
+                        <a class="button button--bubblegum" href="#" @click.prevent="navigate(1)"><i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -64,12 +64,25 @@
 <script setup lang="ts">
 
     import { reactive, ref } from 'vue'
+    import slides from '../data/slides.json' 
 
     const cursor = ref(0)
     const total = ref(0)
 
     const n_modifier = ref('');
     const p_modifier = ref('');
+
+    const slide = reactive({
+        cursor: 0,
+        heading: "",
+        description: "",
+        price: 0,
+        added: false
+    })
+
+    nextSlide(slides[0])
+
+    const basket = reactive([0])    
 
     function add(i: number){        
         basket.push(i)
@@ -107,97 +120,9 @@
         if(cursor.value <= 0){
             cursor.value++
         }
-
-        // console.log("cursor", cursor.value)
-
+        
         nextSlide(slides[cursor.value])
 
     }
 
-    const slide = reactive({
-        cursor: 1,
-        heading: "Discovery",
-        description: 'We get to know your business, goals, and audience — then plan what you really need.',
-        price: 850,
-        added: true
-    })
-
-    const basket = reactive([0])
-
-    const slides = [
-        {    
-            label: 'Discovery',
-            price: 850,
-            description: 'We get to know your business, goals, and audience — then plan what you really need.'
-        },
-        {   
-            label: 'Branding',
-            price: 600,
-            description: 'Logo, colours and simple identity work to help you look consistent and considered.'
-        },
-        {   
-            label: 'Website',
-            price: 950,
-            description: 'A clean, fast site with your brand and content — easy to update and built to last.'
-        },
-        {
-            label: 'SEO',
-            price: 400,
-            description: 'We make sure your site can be found by local customers and search engines alike.'
-        },
-        {   
-            label: 'Email',
-            price: 300,
-            description: 'Templates, tools and guidance for sending great-looking emails and newsletters.'
-        },
-        {   
-            label: 'CRM',
-            price: 500,
-            description: 'We help you pick and set up the right customer database, with training included.'
-        },
-        {
-            label: 'Content',
-            price: 300,
-            description: 'Social media graphics, planning templates and advice to help you post with purpose.'
-        },
-        {
-            label: 'Workspace + Domain',
-            price: 150,
-            description: 'Get set up with professional email, domain, and cloud tools like Google Workspace.'
-        },
-        {
-            label: 'Paid Media',
-            price: 250,
-            description: 'Simple social or search ad setup to help you get seen while staying in control of spend.'
-        },
-        {
-            label: 'Training',
-            price: 100,
-            description: 'One-to-one or team sessions on content, websites, tools, or AI — tailored to you.'
-        }
-    ];
-
-
 </script>
-
-<style lang="scss" scoped>
-
-    .round{
-        background: red;
-        color: white;
-        padding: 3px 8px;
-        border-radius: 50%;
-        &:hover{
-            background: #666;
-        }
-    }
-
-    .calculator{
-        &__action{
-            display: flex;
-            justify-content: space-between;
-            line-height: 1;
-        }
-    }    
-
-</style>

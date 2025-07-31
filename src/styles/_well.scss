@@ -1,7 +1,7 @@
 @use "vars";
 
 .well{
-    border: solid 2px #CDB9C3;
+    border: solid 2px vars.$colour-off-cream-dark;
     border-radius: vars.$radius;
     position: relative;
     overflow: hidden;

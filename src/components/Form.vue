@@ -51,7 +51,7 @@
                 </p>
 
                 <p class="form__row">
-                    <button class="form__input form__input--submit" type="submit">Subscribe</button>
+                    <button class="button button--bubblegum" type="submit">Subscribe</button>
                 </p>
             </fieldset>
 

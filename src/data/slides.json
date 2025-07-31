@@ -1,0 +1,52 @@
+[
+        {    
+            "label": "Discovery",
+            "price": 850,
+            "description": "We get to know your business, goals, and audience — then plan what you really need."
+        },
+        {   
+            "label": "Branding",
+            "price": 600,
+            "description": "Logo, colours and simple identity work to help you look consistent and considered."
+        },
+        {   
+            "label": "Website",
+            "price": 950,
+            "description": "A clean, fast site with your brand and content — easy to update and built to last."
+        },
+        {
+            "label": "SEO",
+            "price": 400,
+            "description": "We make sure your site can be found by local customers and search engines alike."
+        },
+        {   
+            "label": "Email",
+            "price": 300,
+            "description": "Templates, tools and guidance for sending great-looking emails and newsletters."
+        },
+        {   
+            "label": "CRM",
+            "price": 500,
+            "description": "We help you pick and set up the right customer database, with training included."
+        },
+        {
+            "label": "Content",
+            "price": 300,
+            "description": "Social media graphics, planning templates and advice to help you post with purpose."
+        },
+        {
+            "label": "Workspace + Domain",
+            "price": 150,
+            "description": "Get set up with professional email, domain, and cloud tools like Google Workspace."
+        },
+        {
+            "label": "Paid Media",
+            "price": 250,
+            "description": "Simple social or search ad setup to help you get seen while staying in control of spend."
+        },
+        {
+            "label": "Training",
+            "price": 100,
+            "description": "One-to-one or team sessions on content, websites, tools, or AI — tailored to you."
+        }
+    ]
