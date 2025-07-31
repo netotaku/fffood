@@ -1,7 +1,16 @@
+@use "vars";
+
 .calculator{
     &__action{
         display: flex;
         justify-content: space-between;
         line-height: 1;
+    }
+    &__cursor{
+        color: vars.$colour-off-cream-dark;
+    }
+    &__total{
+        font-size: 2em;
+        font-weight: bold;
     }
 }    

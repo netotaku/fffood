@@ -5,10 +5,10 @@
         <section class="section section--lightest">
             <div class="section__inner">	
 
-                <span class="calculator__cursor">{{cursor+1}}.</span>
-
-                <h1>{{ slide.heading }}</h1>
+                <h1><span class="calculator__cursor">{{cursor+1}}.</span> {{ slide.heading }}</h1>
                 <p v-html="slide.description"></p>
+                 <p><small>
+                    <em>Prices do not include VAT</em></small></p>
 
                 <div class="well">
                     <table class="table">
@@ -30,18 +30,20 @@
                                     
                                 </td>
                                 <td>{{ slides[item].label }}</td>
-                                <td class="table__cell table__cell--right">£{{ slides[item].price }}</td>
+                                <td class="table__cell table__cell--right">{{ formatCurrency(slides[item].price) }}</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>                                                
                                 <td class="table__cell table__cell--center table__cell--slim"></td>
-                                <td>Total</td>
-                                <td class="table__cell table__cell--right">£{{ total }}</td>                        
+                                <td></td>
+                                <td class="table__cell table__cell--right calculator__total">{{ formatCurrency(total) }}</td>                        
                             </tr>
                         </tfoot>
                     </table>
                 </div>
+
+               
 
             </div> <!-- /.section__inner -->
         </section> <!-- /.section -->         
@@ -100,27 +102,40 @@
         added: false
     })
 
-    nextSlide(slides[0])
-
-    const basket = reactive([0])    
+    const basket = reactive([0])  
+    
+    function formatCurrency(value: number): string {
+        return new Intl.NumberFormat('en-GB', {
+            style: 'currency',
+            currency: 'GBP',
+            minimumFractionDigits: 0,
+        }).format(value)
+    }
 
     function add(i: number){
         
         if(!slides[i].added){
+            
             basket.push(i)
-            total.value = 0
-            basket.forEach(item => {
-                total.value += slides[item].price
-            })
-
             slides[i].added = true
             added.value = true
+
+            getTotal()
         }
 
     }
 
     function remove(i: number){
-        basket.splice(i, 1);
+        added.value = slides[basket[i]].added = false        
+        basket.splice(i, 1);   
+        getTotal()     
+    }
+
+    function getTotal(){
+        total.value = 0
+        basket.forEach(item => {
+            total.value += slides[item].price
+        })
     }
 
     type s = {
@@ -148,18 +163,23 @@
         n_modifier.value = ""
         p_modifier.value = ""
 
-        if(cursor.value >= slides.length){
+        if (cursor.value >= slides.length - 1) {
             n_modifier.value = "button--disabled"
-            cursor.value--
+            cursor.value = slides.length - 1
         }
-        
-        if(cursor.value <= 0){
+
+        if (cursor.value <= 0) {
             p_modifier.value = "button--disabled"
             cursor.value = 0
-        }
+        } 
         
         nextSlide(slides[cursor.value])
-
+    
     }
 
+    /////
+
+    nextSlide(slides[0])
+    getTotal()
+    
 </script>

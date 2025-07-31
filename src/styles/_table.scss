@@ -5,16 +5,21 @@
     width: 100%;
     border-radius: vars.$radius;
     position: relative;
+
     th, td{            
-        padding: 4px 12px;        
+        padding: 4px 12px;       
     }
     thead{
         border-bottom: solid 2px vars.$colour-off-cream-light;
-        text-align: left;        
+        text-align: left;    
+  
     }
     tfoot{
         border-top: solid 2px vars.$colour-off-cream-light;
         text-align: left;
+        th, td{            
+            vertical-align: top;     
+        }  
     }
     tbody{        
         tr{

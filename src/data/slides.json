@@ -49,7 +49,7 @@
             "required": false
         },
         {
-            "label": "Workspace + Domain",
+            "label": "Workspace",
             "price": 150,
             "description": "Get set up with professional email, domain, and cloud tools like Google Workspace.",
             "added": false,
