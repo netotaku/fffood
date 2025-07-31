@@ -13,4 +13,8 @@
     &:hover{
         background: vars.$colour-bubblegum-pink;
     }
+
+    &--disabled{
+        background: #ccc;
+    }
 }

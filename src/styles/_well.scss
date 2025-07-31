@@ -1,0 +1,11 @@
+@use "vars";
+
+.well{
+    border: solid 2px #CDB9C3;
+    border-radius: vars.$radius;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    padding: 10px; // var(--h-rule);
+    filter: drop-shadow(3px 3px 0px rgba(0,0,0,.05));
+}

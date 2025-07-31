@@ -1,0 +1,33 @@
+@use "vars";
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: vars.$radius;
+    position: relative;
+    th, td{            
+        padding: 4px 12px;        
+    }
+    thead{
+        border-bottom: solid 2px #E3CED9;
+        text-align: left;        
+    }
+    tfoot{
+        border-top: solid 2px #E3CED9;
+        text-align: left;
+    }
+    tbody{        
+        tr{
+            &:hover{
+               //  background: #CDB9C3;
+            }
+        }
+    } 
+    &__slim{
+        width: 90px;
+    } 
+    &__actions{
+        text-align: right;
+        font-size: .8em;       
+    }
+}
