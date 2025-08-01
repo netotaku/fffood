@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content'
+const posts = await getCollection('case-studies')
+---
+<div class="grid grid--thirds">
+
+    {
+        posts.map((post) => (
+            <a class="card" href={`/case-studies/${post.id}/`} >
+                <div class="card__thumb">                
+                    
+                </div>
+                <div class="card__info">
+                    <h3>{post.data.title}</h3>                
+                    <p>{post.data.summary}</p>						
+                </div>
+            </a>
+        ))
+    }
+
+</div>

@@ -1,0 +1,24 @@
+@use "vars";
+
+.card{
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: vars.$radius;
+    border: solid 2px vars.$colour-off-cream-dark;
+    filter: vars.$shadow;
+    
+    &__info{
+        padding: var(--h-rule);
+    }  
+    &__thumb{
+        height: 150px;
+        background-color: vars.$colour-off-cream-dark;
+    }
+    &:hover{
+        background-color: vars.$colour-green;
+        color: white;
+    }  
+}

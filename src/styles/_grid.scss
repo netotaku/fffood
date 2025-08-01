@@ -1,0 +1,24 @@
+@use "vars";
+
+.grid {
+    display: flex;
+    gap: var(--h-rule);
+
+    &--thirds {
+        > * {
+            flex: 0 0 calc((100% - 2 * var(--h-rule)) / 3);
+        }
+    }
+
+    &--bottom-margin {
+        margin-bottom: var(--h-rule);
+    }
+    &--top-margin {
+        margin-top: var(--gutter);
+    }
+
+    @media (max-width: 600px){
+        flex-direction: column;
+    }
+
+}

@@ -8,10 +8,13 @@
     &__inner{
         padding: var(--gutter);
         margin: auto;
+
+        &--slim{
+            padding-top: var(--h-rule);
+            padding-bottom: var(--h-rule);
+            line-height: 1;            
+        }
         
-        // &--full{
-        //     max-width: 100%;
-        // }
     }
     &--darkest{
         background-color: #111;
@@ -30,4 +33,5 @@
     &--butter{
         background-color: vars.$colour-butter-yellow;
     }
+
 }

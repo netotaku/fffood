@@ -1,5 +1,5 @@
 ---
-title: Redcatch Construction
+title: Redcatch Group
 summary: From back-of-a-napkin idea to bold, professional brand presence.
 techStack: 
  - Squarespace

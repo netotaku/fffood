@@ -1,8 +1,7 @@
 ---
 import '../styles/base.scss';
-import Form from '../components/Form.vue';
-import Calculator from '../components/Calculator.vue';
 import BaseLayout from '../layouts/base.astro'
+import CaseStudies from '../components/CaseStudyList.astro'
 ---
 <BaseLayout
 	title="fffood" 
@@ -10,17 +9,33 @@ import BaseLayout from '../layouts/base.astro'
 
 	<section class="section section--darkest">
 		<div class="section__inner">
+
 			<h1>Thinking Small</h1>
+
 			<p><strong>We give small businesses a confident digital presence.</strong><br class="u-no-mobile">
 			Smart, purposeful, affordable, and shaped by big brand thinking.</p>
+
 			<p><a class="button" href="https://wa.me/447771535355">
 				<i class="fa-brands fa-whatsapp"></i> Click to chat</a></p>
+
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
 
 	<section class="section section--lightest">
 		<div class="section__inner">
-			
+
+			<h2>Recent projects</h2>
+			<p><strong>Every business is different.</strong> These examples show how we’ve adapted our approach to suit different needs, budgets and starting points.</p>
+
+			<CaseStudies />
+
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->	
+
+
+	<section class="section section--light section">
+		<div class="section__inner section__inner--slim">
+			<a class="button button--green" href="/case-studies">Read more</a>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
 	

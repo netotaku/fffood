@@ -29,6 +29,15 @@
         }
     }
 
+    &--green{
+        background: vars.$colour-green!important;  
+        &:hover{
+            @media (min-width: 600px) {
+                background: vars.$colour-bubblegum-pink!important;              
+            }
+        } 
+    }
+
     &--disabled{
         background: vars.$colour-off-cream-light;
         &:hover{
