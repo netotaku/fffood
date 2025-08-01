@@ -27,5 +27,3 @@ export const collections = {
 	blog,
 	'case-studies': caseStudies
 };
-
-// export type CaseStudyEntry = CollectionEntry<'case-studies'>;
