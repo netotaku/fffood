@@ -5,6 +5,12 @@ import BaseLayout from '../layouts/base.astro'
 ---
 <BaseLayout
 	title="fffood / Rates and Pricing" 
-	description="How much does it cost">
-    <Calculator client:load />	
+	description="How much does it cost"
+	hero="/img/heroes/hero.jpg">
+	<section class="section section--darkest">
+		<div class="section__inner">
+			<h1>Pricing</h1>		
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+    <Calculator client:load />		
 </BaseLayout>

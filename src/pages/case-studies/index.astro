@@ -1,8 +1,28 @@
 ---
-import '../../styles/base.scss';
 import BaseLayout from '../../layouts/base.astro'
+import { getCollection } from 'astro:content'
+const posts = await getCollection('case-studies')
+console.log(posts)
 ---
 <BaseLayout
 	title="fffood / Case Studies" 
 	description="Our work">
+	<section class="section section--darkest">
+		<div class="section__inner">
+			<h1>Case Studies</h1>		
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+
+	<section class="section section--lightest">
+		<div class="section__inner">			
+			{
+				posts.map((post) => (
+					<a href={`/case-studies/${post.id}/`} >
+						<p>title: {post.data.title}</p>
+						<p>Summary: {post.data.summary}</p>						
+					</a>
+				))
+			}
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->	
 </BaseLayout>

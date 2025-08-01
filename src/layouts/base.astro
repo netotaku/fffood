@@ -11,7 +11,10 @@ interface Props {
     hero?: string;
     subscribe?: boolean;
 }
-const { title, description } = Astro.props;
+
+const { title, description, hero } = Astro.props;
+const heroStyle = hero ? `background-image: url('${hero}');` : '';
+
 ---
 
 <!doctype html>
@@ -39,11 +42,11 @@ const { title, description } = Astro.props;
                     </Burger>
 
                     <a class="nav__button nav__button--contact" href="/contact">
-                            <i class="fa-brands fa-whatsapp"></i></a>
+                        <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </nav>
-        <section class="section section--butter hero">
+        <section style={heroStyle} class="section section--butter hero">
 		    <div class="section__inner section__inner--full">				
 			   
             </div> <!-- /.section__inner -->
