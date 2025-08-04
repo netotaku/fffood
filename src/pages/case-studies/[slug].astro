@@ -1,5 +1,6 @@
 ---
 import { getEntry, render } from 'astro:content';
+ import { getImage } from 'astro:assets';
 import Layout from '../../layouts/base.astro'
 
 const { slug } = Astro.params;
@@ -10,11 +11,25 @@ if (!entry) throw new Error(`No case study found for slug: ${slug}`)
 
 const { Content } = await render(entry);
 const { data } = entry;
+// console.log(data)
+// const image = await getImage({ src: data.hero, width: 1000, height: 800, format: 'avif' });
 ---
 <Layout 
   title={data.title}
-  description={data.summary}>
-  
+  description={data.summary}
+  hero={data.hero}  
+  >
+
+  	<section class="section section--dark">
+		<div class="section__inner section__inner--slim">
+			<p class="breadcrumb">
+				<a href="/">Home</a> / 
+				<a href="/case-studies/">Case Studies</a> / 
+				{data.title}
+			</p>
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+
 	<section class="section section--darkest">
 		<div class="section__inner">
 			<h1>{data.title}</h1>
@@ -23,8 +38,32 @@ const { data } = entry;
 	</section> <!-- /.section -->
 
 	<section class="section section--lightest">
-		<div class="section__inner">
-			<Content />
+		<div class="section__inner grid grid--two-thirds-one-third">
+
+			<div class="grid__two-thirds">
+				<Content />
+			</div>
+			<div class="grid__two-a-third">				
+				<div class="well">
+					<h3>Services</h3>
+					<ul>
+						{data.services.map((service) => (
+							<li>{service}</li>
+						))}
+					</ul>
+				</div>
+				<div class="well">
+					<h3>Tech Stack</h3>
+					<ul>
+						{data.techStack.map((tech) => (
+							<li>{tech}</li>
+						))}
+					</ul>
+				</div>
+				<p><a class="button button--green" href="" target="_blank">View website</a></p>
+			</div>
+
+			
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
 

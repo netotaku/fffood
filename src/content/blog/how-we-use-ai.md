@@ -1,7 +1,7 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'How we use AI'
+summary: 'Lorem ipsum dolor sit amet'
+pubDate: 'Aug 04 2025'
 heroImage: ''
 ---
 

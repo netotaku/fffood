@@ -7,15 +7,16 @@
     position: relative;
     overflow: hidden;
     border-radius: vars.$radius;
-    border: solid 2px vars.$colour-off-cream-dark;
-    filter: vars.$shadow;
+    // border: solid 2px vars.$colour-off-cream-dark;
+    // filter: vars.$shadow;
     
     &__info{
         padding: var(--h-rule);
     }  
     &__thumb{
-        height: 150px;
+        height: 250px;
         background-color: vars.$colour-off-cream-dark;
+        background-size: cover;
     }
     &:hover{
         background-color: vars.$colour-green;

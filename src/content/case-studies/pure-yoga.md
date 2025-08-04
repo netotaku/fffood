@@ -4,6 +4,13 @@ summary: Helping an independent yoga teacher untangle the tech and bring everyth
 techStack: 
  - Squarespace
  - Momence
+services: 
+ - Website
+ - Window Graphics
+ - A-boards
+ - Fliers
+hero: /img/heroes/case-studies/py-hero.png
+www: ""
 ---    
 When Pure Yoga got in touch with fffood, they already had a strong sense of who they were: a trusted teacher offering in-person, online and 1-to-1 yoga sessions. What they didn’t have was a digital setup that worked.
 

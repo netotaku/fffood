@@ -4,6 +4,11 @@ summary: Turning a safe site into a bold, rebellious brand platform.
 techStack: 
  - Squarespace
  - Canva
+services: 
+ - Website
+ - Social Assets
+hero: /img/heroes/case-studies/cr-hero.jpg
+www: ""
 ---			
 Culture Rebel is an HR and training consultancy that doesn’t play by the old rules — but their original website didn’t quite get that across.
 

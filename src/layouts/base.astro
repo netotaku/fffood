@@ -9,10 +9,10 @@ interface Props {
 	title: string;
 	description: string;
     hero?: string;
-    subscribe?: boolean;
+    showCTA?: boolean;
 }
 
-const { title, description, hero } = Astro.props;
+const { title, description, hero, showCTA } = Astro.props;
 const heroStyle = hero ? `background-image: url('${hero}');` : '';
 
 ---
@@ -28,22 +28,26 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
         <div id="js-overlay"></div>
         <nav class="nav">
             <div class="nav__inner">
+
                 <a href="/">
                     <img class="nav__brand brand" src="/img/fffood-brand-red.png">
-                </a>
-                <div class="nav__bar">
-                    
-                    <ul class="nav__links">
-                        <Links />                        
-                    </ul>
-
-                    <Burger client:only="vue">
-                        <Links />                          
-                    </Burger>
-
-                    <a class="nav__button nav__button--contact" href="/contact">
-                        <i class="fa-brands fa-whatsapp"></i></a>
+                </a>   
+                
+                <div class="nav__bars">   
+                    <div class="nav__bar nav__bar--stretch nav__bar--blur">                    
+                        <ul class="nav__links">
+                            <Links />                                                
+                        </ul>
+                        <Burger client:only="vue">
+                            <Links />                          
+                        </Burger>
+                    </div>
+                    <div class="nav__bar">
+                        <a class="nav__button nav__button--contact" href="https://wa.me/447771535355">
+                            <i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
                 </div>
+         
             </div>
         </nav>
         <section style={heroStyle} class="section section--butter hero">
@@ -54,12 +58,24 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
 
         <slot />
 
+
+        {showCTA ? 
+            <section class="section section--butter section--girl">
+                <div class="section__inner">
+                    <h2>Ready to get started?</h2>
+                    <p>Whether you need a new site, a fresh strategy, or just a better way to tell your story — we’re here to help.</p>
+                    <p><a class="button button--bubblegum" href="/contact">Let's talk</a></p>
+                </div> <!-- /.section__inner -->
+            </section> <!-- /.section -->
+        : "" }
+
+
         <section class="section section--darkest">
             <div class="section__inner">
                 <h2>Subscribe</h2>
                 <Form client:load mode="subscribe" salt="aaa" />
                 <p>Subscribe for occasional updates and useful digital tips.<br> 
-                    <a href="#">We respect your privacy</a></p>
+                    <a href="/cookies-and-privacy">We respect your privacy</a></p>
             </div> <!-- /.section__inner -->
         </section> <!-- /.section -->
 
@@ -77,8 +93,7 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
 
                 <div class="footer__right">
                     <ul>
-                        <Links />
-                        <li><a href="/contact">Contact</a></li>
+                        <Links />                        
                     </ul>
                 </div>
 

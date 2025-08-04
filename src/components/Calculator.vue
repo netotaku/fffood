@@ -49,7 +49,7 @@
         </section> <!-- /.section -->         
 
         <section class="section section--light">
-            <div class="section__inner">	
+            <div class="section__inner section__inner--slim">	
 
                 <div class="calculator__action">
                     <div class="calculator__nav">

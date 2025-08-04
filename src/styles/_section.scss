@@ -22,6 +22,9 @@
     &--dark{
         background-color: #222;
     }
+    &--brown{
+        background-color: vars.$colour-deep-brown;
+    }
     &--light{
         background-color: #CDB9C3;
         color: #111;
@@ -32,6 +35,18 @@
     }
     &--butter{
         background-color: vars.$colour-butter-yellow;
+    }
+    &--girl{
+
+        background-image: url(/img/heroes/hero.jpg);
+        // background-size: 99%;
+        background-position: right -120px;
+        background-repeat: no-repeat;
+
+        .section__inner{
+            max-width: 50%;
+            margin-left: 0;
+        }
     }
 
 }

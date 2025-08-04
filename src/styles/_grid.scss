@@ -10,6 +10,23 @@
         }
     }
 
+    &--halves{
+        > * {
+            flex: 0 0 calc((100% - var(--h-rule)) / 2);
+        }
+    }
+
+
+    &--two-thirds-one-third {
+        > :first-child {
+        flex: 0 0 calc((100% - var(--h-rule)) * 2 / 3);
+        }
+
+        > :last-child {
+        flex: 0 0 calc((100% - var(--h-rule)) / 3);
+        }
+    }
+
     &--bottom-margin {
         margin-bottom: var(--h-rule);
     }

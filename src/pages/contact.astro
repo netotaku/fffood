@@ -6,11 +6,18 @@ import BaseLayout from '../layouts/base.astro'
 <BaseLayout
 	title="fffood / Contact us" 
 	description="Let's talk!"
-    subscribe={false}>
+	hero="/img/heroes/contact.jpg"
+    showCTA={false}>
+
+	<section class="section section--darkest">
+		<div class="section__inner">	
+			<h1>Get in touch</h1>
+			<p>Got a project in mind or just want to say hello? Let’s chat.</p>
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->				
 
 	<section class="section section--dark">
-		<div class="section__inner">
-			<h2>Get in touch</h2>
+		<div class="section__inner">			
 			<Form client:load mode="contact" salt="bbb" />
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->

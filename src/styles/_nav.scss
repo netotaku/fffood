@@ -8,82 +8,97 @@
     z-index: 2;
 
     a{
-        color: white;
-        display: block;
+        color: white;        
         text-decoration: none;            
-        font-weight: bold;
+        // font-weight: bold;
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        line-height: 1;
     }
     
     &__inner{        
         max-width: vars.$max-width;        
         padding-left: var(--gutter);
         padding-right: var(--gutter);
-        margin: auto;
+        margin: auto;        
+    }
+
+    &__bars{
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
     }
 
     &__bar{
+        height: 60px;
         display: flex;
-        justify-content: end;
-        align-items: center;                
+        justify-content: end;                       
         position: relative;
         overflow: hidden;
         border-radius: 30px;
-        background-color: rgba(0,0,0,.4);        
         line-height: 1;
-        backdrop-filter: blur(10px);
-        margin-top: 30px;
-        height: 59px;
+
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+
+        &--blur{
+            background-color: rgba(0,0,0,.4);        
+            backdrop-filter: blur(10px);
+        }
+        
+        &--stretch{
+            flex: 1 1 auto; 
+        }
+    
     }
 
 
     &__links{
         display: flex;     
-        margin: 0px!important;
-        margin-right: 14px!important;
+        margin: 0px!important;        
           
-        a{            
-            padding: var(--h-rule) 14px;
+        a{                        
             &:hover{
                 background-color: vars.$colour-bubblegum-pink;
             }
-        }  
+        } 
+   
+        li:last-child {
+            a{
+                padding-right: 34px;
+            }
+        }
+                    
         @media (max-width: 910px){
             display: none;
         }      
     }
     
     &__button{  
-
-        padding: 0px;
-
-        display: block;
-        // align-self: stretch; /* default, but explicit is good */
-        height: 100%;
-        padding-top: 15px;
-        // justify-content: center;
-        // align-items: center; 
+        
+        display: block;    
         text-align: center;                                     
         font-weight: normal;
 
-        font-size: 1.4em;
+        min-width: 60px; 
         
         &--burger{
             display: none!important;
             background-color: vars.$colour-bubblegum-pink;
-            
-            width: 60px;
+            font-size: 1.5em;
+                        
             @media (max-width: 900px){
-                display: block!important;
+                display: flex!important;
             }  
         }
         &--contact{
+            font-size: 1.5em;
             background-color: vars.$colour-green;
-              
-            width: 70px;
-            padding-right: 6px!important;
-            
             @media (max-width: 600px){
-                font-size: 1.5em;
+                
             }  
         }
 
@@ -98,7 +113,7 @@
     &__brand{
         position: absolute;
         z-index: 1;        
-        margin-top: -17px;
-        margin-left: 10px;
+        margin-top: 125px;
+        // margin-left: 10px;
     }
 }

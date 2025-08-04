@@ -1,13 +1,12 @@
 ---
 import { getCollection } from 'astro:content'
-const posts = await getCollection('case-studies')
+const posts = await getCollection('blog')
 ---
-<div class="grid grid--thirds">
-
+<div class="grid grid--halves">
     {
         posts.map((post) => (
-            <a class="card" href={`/case-studies/${post.id}/`} >
-                <div class="card__thumb" style={`background-image: url(${post.data.hero});`}>                
+            <a class="card" href={`/blog/${post.id}/`} >
+                <div class="card__thumb" style="">                
                     
                 </div>
                 <div class="card__info">
@@ -17,5 +16,4 @@ const posts = await getCollection('case-studies')
             </a>
         ))
     }
-
 </div>
