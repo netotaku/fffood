@@ -7,8 +7,10 @@
     background: white;
     padding: var(--h-rule);    
     margin-bottom: var(--h-rule);
+    color: #222;
     &--dark{
         background: #333;
+        color: white;
     }
     &--no-pad{
         margin-bottom: 0;
@@ -23,8 +25,7 @@
 
 .browser{
     width: 100%;
-    background-color: #ccc;
-    // border: solid 6px #444;
+    background-color: #ccc;    
     background: linear-gradient(to bottom, #444 0%, #333 100%);
     padding: 6px;
     padding-top: 3px;
@@ -37,9 +38,6 @@
         background-color: #666;
         position: relative;
         overflow-y: scroll;
-    }
-    &__header{
-        
     }
 
     &__control{

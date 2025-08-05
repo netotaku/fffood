@@ -41,10 +41,10 @@
     }
 
     &--disabled{
-        background: vars.$colour-off-cream-light;
+        background: rgba(255,255,255,.5)!important;  
         &:hover{
             @media (min-width: 600px) {
-                background: vars.$colour-off-cream-light!important;  
+                background: rgba(255,255,255,.5)!important;  
             }
         }
     }

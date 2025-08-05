@@ -20,6 +20,10 @@
             line-height: 1;            
         }
 
+        &--no-bottom{            
+            padding-bottom: 0px;            
+        }
+
         &--full{
             padding: 0px;
             img{
@@ -50,18 +54,18 @@
     &--butter{
         background-color: vars.$colour-butter-yellow;
     }
-    &--fade{
-        // background: linear-gradient(to bottom, rgba(17, 17, 17, .5) 0%, rgba(17, 17, 17, .9) 100%);
+    &--fade{    
         background: linear-gradient(to bottom, #333 0%, #111 100%);
     }
-    &--fade-reverse{
-        // background: linear-gradient(to bottom, rgba(17, 17, 17, .5) 0%, rgba(17, 17, 17, .9) 100%);
+    &--fade-reverse{        
         background: linear-gradient(to bottom, #111 0%, #222 100%);
+    }
+    &--mid{
+        background: rgba(0,0,0,.5);
     }
     &--girl{
 
-        background-image: url(/img/heroes/hero.jpg);
-        // background-size: 99%;
+        background-image: url(/img/heroes/hero.jpg);        
         background-position: right -120px;
         background-repeat: no-repeat;
 

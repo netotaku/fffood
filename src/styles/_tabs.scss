@@ -1,0 +1,31 @@
+@use "vars";
+
+.tabs{
+    &__menu{
+        display: flex; 
+        gap: 6px;       
+        &__link{
+            text-align: center;
+            min-width: 140px;
+            display: block;   
+            padding: var(--h-rule); 
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-top-left-radius: vars.$radius;
+            border-top-right-radius: vars.$radius;
+            background-color: rgba(255,255,255,.1);
+            text-decoration: none;
+            color: #ccc;
+            &--selected{
+                background-color: #333;
+                color: white;
+            }
+            &:hover{
+                background-color: vars.$colour-bubblegum-pink;
+                color: white;
+            }
+        }
+    }
+
+}

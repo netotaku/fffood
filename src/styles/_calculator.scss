@@ -14,3 +14,21 @@
         font-weight: bold;
     }
 }    
+
+
+.bill{
+    position: relative;
+    &__footer{
+        position: absolute;
+        bottom: var(--h-rule);
+        right: var(--h-rule);
+        left: var(--h-rule);  
+        width: auto;      
+    }
+    &__scroll{
+        position: relative;
+        overflow-y: scroll;
+        height: 260px;
+        margin-bottom: 70px;
+    }
+}
