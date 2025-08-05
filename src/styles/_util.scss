@@ -15,5 +15,8 @@
     &p-first-child{
         font-size: 1.2em;
         margin-bottom: var(--h-rule);
-    }    
+    }  
+    &measure{
+        max-width: 800px;
+    }  
 }

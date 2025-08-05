@@ -16,4 +16,43 @@
     &__heading{
         margin-bottom: 0!important;
     }
+    &--full{
+        padding: 0; 
+    }
+}
+
+.browser{
+    width: 100%;
+    background-color: #ccc;
+    // border: solid 6px #444;
+    background: linear-gradient(to bottom, #444 0%, #333 100%);
+    padding: 6px;
+    padding-top: 3px;
+    img{
+        display: block;
+        width: 100%;
+    }
+    &__window{
+        height: 180px;
+        background-color: #666;
+        position: relative;
+        overflow-y: scroll;
+    }
+    &__header{
+        
+    }
+
+    &__control{
+        font-size: 1.1em;
+        &--close{
+            color: vars.$colour-bright-red;
+        }
+        &--min{
+            color: vars.$colour-butter-yellow;
+        }
+        &--max{
+            color: vars.$colour-green;
+        }
+    }
+    
 }

@@ -18,12 +18,15 @@
 
 
     &--two-thirds-one-third {
+
+        gap: var(--gutter);
+
         > :first-child {
-        flex: 0 0 calc((100% - var(--h-rule)) * 2 / 3);
+        flex: 0 0 calc((100% - var(--gutter)) * 2 / 3);
         }
 
         > :last-child {
-        flex: 0 0 calc((100% - var(--h-rule)) / 3);
+        flex: 0 0 calc((100% - var(--gutter)) / 3);
         }
     }
 

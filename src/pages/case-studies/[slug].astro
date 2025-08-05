@@ -21,7 +21,7 @@ const { data } = entry;
   showCTA={true} 
   >
 
-  	<section class="section section--dark">
+  	<section class="section section--fade-reverse">
 		<div class="section__inner section__inner--slim">
 			<p class="breadcrumb">
 				<a href="/">Home</a> / 
@@ -34,16 +34,32 @@ const { data } = entry;
 	<section class="section section--darkest">
 		<div class="section__inner">
 			<h1>{data.title}</h1>
-			<p>{data.summary}</p>
+			<p class="u-measure">{data.summary}</p>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
 
-	<section class="section section--dark">
+	<section class="section section--fade">
 		<div class="section__inner grid grid--two-thirds-one-third">
+		
 			<div class="typography">
 				<Content />
+				<p><a class="button button--green" target="_blank" href={data.www} target="_blank">View website</a></p>
 			</div>
-			<aside class="section__aside typography">				
+			<aside class="section__aside typography">
+				
+				<div class="browser well well--full well--dark">
+					<div class="browser">
+						<div class="browser__header">
+							<span class="browser__control browser__control--close">●</span>
+							<span class="browser__control browser__control--min">●</span>
+							<span class="browser__control browser__control--max">●</span>
+						</div>
+						<div class="browser__window">
+							<img src={data.screenShot}>
+						</div>
+					</div>
+				</div>
+
 				<div class="well well--dark">
 					<h3 class="well__heading">Services</h3>
 					<ul>
@@ -60,7 +76,7 @@ const { data } = entry;
 						))}
 					</ul>
 				</div>
-				<p><a class="button button--green" href="" target="_blank">View website</a></p>
+				
 			</aside>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	

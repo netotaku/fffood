@@ -17,11 +17,13 @@ const caseStudies = defineCollection({
 	schema: () =>
 		z.object({
 			title: z.string(),
+			www: z.string(),
     		summary: z.string(),        
     		techStack: z.array(z.string()),
     		gallery: z.array(z.string()).optional(),
 			services: z.array(z.string()),
 			hero: z.string().optional(),
+			screenShot: z.string().optional(),
 		}),
 });
 

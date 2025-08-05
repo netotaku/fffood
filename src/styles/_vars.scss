@@ -17,7 +17,7 @@ $max-width: 1200px;
 $shadow: drop-shadow(3px 3px 0px rgba(0,0,0,.05));
 
 :root {
-    --h-rule: 20px;
+    --h-rule: 24px;
     --gutter: 50px;
     @media (max-width: 600px) {
         --gutter: 20px;

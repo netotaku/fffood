@@ -17,10 +17,20 @@ const { data } = entry;
     description={data.summary}
     hero={data.hero}>
 
+    <section class="section section--fade-reverse">
+		<div class="section__inner section__inner--slim">
+			<p class="breadcrumb">
+				<a href="/">Home</a> / 
+				<a href="/Blog/">Blog</a> / 
+				{data.title}
+			</p>
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+
     <section class="section section--darkest">
 		<div class="section__inner">
 			<h1>{data.title}</h1>
-			<p>{data.summary}</p>
+			<p class="u-measure">{data.summary}</p>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
 

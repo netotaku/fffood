@@ -11,7 +11,8 @@ services:
  - A-boards
  - Fliers
 hero: /img/heroes/case-studies/py-hero.png
-www: ""
+www: "https://pureyogabristol.com/"
+screenShot: "/img/ss/py.png"
 ---    
 <div class="u-p-first-child">
     <strong>When Pure Yoga got in touch with fffood, they already had a strong sense of who they were:</strong> a trusted teacher offering in-person, online and 1-to-1 yoga sessions. What they didn’t have was a digital setup that worked.

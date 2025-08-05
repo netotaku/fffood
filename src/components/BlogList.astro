@@ -6,8 +6,8 @@ const posts = await getCollection('blog')
     {
         posts.map((post) => (
             <a class="card card--dark" href={`/blog/${post.id}/`} >
-                <div class="card__thumb" style={`background-image: url(${post.data.hero});`}>                
-                    
+                <div class="card__thumb">                
+                    <img src={post.data.hero}>
                 </div>
                 <div class="card__info">
                     <h3 class="card__heading">{post.data.title}</h3>                
