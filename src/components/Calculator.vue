@@ -38,57 +38,60 @@
                     aria-labelledby="tab-quote">
 
                     <section class="section section--fade">
-                        <div class="section__inner grid grid--halves">	
+                        <div class="section__inner">
+                            <p class="u-measure"><strong>This tool gives you a rough idea of costs</strong> — we'll refine things together based on your needs, and for larger projects, onboarding is always part of the process.</p>
+                        </div>
 
-                            <div class="section__info">
-                                <p><strong>{{ slide.heading }}</strong></p>
-                                <h1>{{ slide.headline }}</h1>
-                                <p v-html="slide.description"></p>                    
-                            </div>
-
-                            <div class="well well--no-pad bill">
-
-                                <table class="table bill__header">
-                                    <thead>
-                                        <tr>
-                                            <td class="table__cell table__cell--center table__cell--slim"><span class="round round--disabled"><i class="fa-solid fa-check"></i></span></td>
-                                            <th>Task</th>
-                                            <th class="table__cell table__cell--right">Price</th>                                
-                                        </tr>
-                                    </thead>  
-                                </table>
-                                <div class="bill__scroll">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr v-for="(item, i) in basket">
-                                                <td class="table__cell table__cell--center table__cell--slim">
-                                                    
-                                                    <a v-if="!slides[item].required" class="round" @click.prevent="remove(i)" href="#">
-                                                        <i class="fa-solid fa-minus"></i></a>
-                                                    <span v-else class="round round--green">
-                                                        <i class="fa-solid fa-check"></i></span>
-                                                    
-                                                </td>
-                                                <td>{{ slides[item].label }}</td>
-                                                <td class="table__cell table__cell--right">{{ formatCurrency(slides[item].price) }}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                        <div class="calculator__well">
+                            <div class="section__inner grid grid--halves">	
+                                <div class="section__info">
+                                    <p><span class="u-label"><strong>{{ slide.heading }}</strong></span></p>
+                                    <h1 class="calculator__headline">{{ slide.headline }}</h1>
+                                    <p v-html="slide.description"></p>                    
                                 </div>
 
-                                <div class="bill__footer">
-                                    <table class="table">
-                                        <tfoot>
-                                            <tr>                                                
-                                                <td colspan="2"><small>
-                                    <em>Prices do not include VAT</em></small></td>
-                                                <td class="table__cell table__cell--right calculator__total">{{ formatCurrency(total) }}</td>                        
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
+                                <div class="well well--no-pad bill">
 
+                                    <table class="table bill__header">
+                                        <thead>
+                                            <tr>
+                                                <td class="table__cell table__cell--center table__cell--slim"><span class="round round--disabled"><i class="fa-solid fa-check"></i></span></td>
+                                                <th>Task</th>
+                                                <th class="table__cell table__cell--right">Price</th>                                
+                                            </tr>
+                                        </thead>  
+                                    </table>
+                                    <div class="bill__scroll">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr v-for="(item, i) in basket">
+                                                    <td class="table__cell table__cell--center table__cell--slim">
+                                                        
+                                                        <a v-if="!slides[item].required" class="round" @click.prevent="remove(i)" href="#">
+                                                            <i class="fa-solid fa-minus"></i></a>
+                                                        <span v-else class="round round--green">
+                                                            <i class="fa-solid fa-check"></i></span>
+                                                        
+                                                    </td>
+                                                    <td>{{ slides[item].label }}</td>
+                                                    <td class="table__cell table__cell--right">{{ formatCurrency(slides[item].price) }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="bill__footer">
+                                        <table class="table">
+                                            <tfoot>
+                                                <tr>                                                
+                                                    <td colspan="2"><small><em>Prices do not include VAT</em></small></td>
+                                                    <td class="table__cell table__cell--right calculator__total">{{ formatCurrency(total) }}</td>                        
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> <!-- /.calculator__well -->
                         </div> <!-- /.section__inner -->
                     </section> <!-- /.section -->         
 
@@ -134,6 +137,41 @@
                         <section class="section section--fade">
                             <div class="section__inner">
                                 <h1>Rate Card</h1>
+
+
+
+
+<div class="well well--no-pad bill">
+
+                                <table class="table bill__header">
+                                    <thead>
+                                        <tr>                                            
+                                            <th>Task</th>
+                                            <th class="table__cell table__cell--right">Price</th>                                
+                                        </tr>
+                                    </thead>                         
+                                    <tbody>
+                                        <tr v-for="slide in slides">                                           
+                                            <td>{{ slide.label }}</td>
+                                            <td class="table__cell table__cell--right">{{ formatCurrency(slide.price) }}</td>
+                                        </tr>
+                                    </tbody>   
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2"><small><em>Prices do not include VAT</em></small></td>
+                                        </tr>
+                                    </tfoot>                                                                        
+                                </table>
+                                
+                            </div>
+
+
+
+
+
+
+
+
                             </div>
                         </section>
                 </div> <!-- /.tabs__tabs__tab --> 

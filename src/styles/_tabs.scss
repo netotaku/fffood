@@ -22,8 +22,10 @@
                 color: white;
             }
             &:hover{
-                background-color: vars.$colour-bubblegum-pink;
-                color: white;
+                @media (min-width: 600px) {
+                    background-color: vars.$colour-bubblegum-pink;
+                        color: white;
+                    }                
             }
         }
     }

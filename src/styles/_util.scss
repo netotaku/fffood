@@ -19,4 +19,12 @@
     &measure{
         max-width: 800px;
     }  
+    &label{
+        display: inline-block;
+        padding: 6px var(--h-rule);
+        background-color: rgba(255,255,255,.3);
+        position: relative;
+        overflow: hidden;
+        border-radius: vars.$radius;
+    }
 }

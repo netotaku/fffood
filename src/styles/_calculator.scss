@@ -13,7 +13,15 @@
         font-size: 2em;
         font-weight: bold;
     }
-}    
+    &__well{
+        background-color: vars.$colour-bubblegum-pink;
+    }
+    &__headline{
+        @media (max-width: 600px) {
+            font-size: 2em;
+        }
+    }
+} 
 
 
 .bill{
@@ -28,7 +36,7 @@
     &__scroll{
         position: relative;
         overflow-y: scroll;
-        height: 260px;
+        min-height: 260px;
         margin-bottom: 70px;
     }
 }
