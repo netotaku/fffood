@@ -27,8 +27,10 @@ blockquote{
     font-style: italic;
     padding-left: var(--h-rule);
     border-left: solid 4px vars.$colour-bubblegum-pink;
+    color: #ccc;
     cite{
         display: block;
+        color: white;
     }
 }
 

@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
- import { getImage } from 'astro:assets';
 import Layout from '../../layouts/base.astro'
+import Related from '../../components/Related.astro'
 
 const { slug } = Astro.params;
 if (!slug) { throw new Error('Missing slug parameter') }
@@ -80,5 +80,14 @@ const { data } = entry;
 			</aside>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
+
+	<section class="section section--fade">
+		<div class="section__inner">
+			<h2>Related Work</h2>
+			<Related 
+				collection="case-studies"
+				slugs={data.related} />
+		</div>
+	</section>
 
 </Layout>

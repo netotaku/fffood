@@ -1,0 +1,34 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+
+type CollectionType = 'case-studies' | 'blog';
+
+// Props
+const { collection, slugs } = Astro.props as {
+  collection: CollectionType;
+  slugs: string[];
+};
+
+// Retrieve the posts from the given collection
+const posts = await Promise.all(
+  slugs.map((slug) => getEntry(collection, slug))
+);
+
+// Filter out any null results (in case a slug doesn't match)
+const related = posts.filter((post): post is NonNullable<typeof post> => Boolean(post));;
+---
+<div class="grid grid--halves">
+    {
+        related.map((post) => (
+            <a class="card card--dark" href={`/${collection}/${post.id.replace(/\.md$/, '')}/`} >
+                <div class="card__thumb">                
+                    <img src={post.data.hero}>
+                </div>
+                <div class="card__info">
+                    <h3 class="card__heading">{post.data.title}</h3>                
+                    <p>{post.data.summary}</p>						
+                </div>
+            </a>
+        ))
+    }
+</div>

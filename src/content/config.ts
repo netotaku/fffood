@@ -9,6 +9,7 @@ const blog = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		hero: z.string().optional(),
+		related: z.array(z.string()),
 	}),
 });
 
@@ -24,6 +25,7 @@ const caseStudies = defineCollection({
 			services: z.array(z.string()),
 			hero: z.string().optional(),
 			screenShot: z.string().optional(),
+			related: z.array(z.string()).optional(),
 		}),
 });
 

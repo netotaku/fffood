@@ -11,6 +11,9 @@ services:
 hero: /img/heroes/case-studies/cr-hero.png
 www: "https://culturerebel.co.uk/"
 screenShot: "/img/ss/cr.png"
+related:
+ - "redcatch-construction"
+ - "pure-yoga"
 ---	
 <div class="u-p-first-child">		
     <strong>Culture Rebel is an HR and training consultancy that doesn’t play by the old rules</strong> — but their original website didn’t quite get that across.

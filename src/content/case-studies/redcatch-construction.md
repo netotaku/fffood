@@ -11,9 +11,13 @@ services:
  - Business Cards
  - Scaffolding Banners
  - Social Assets
+ - Workspace & Email
 hero: /img/heroes/case-studies/rc-hero.png
-www: ""
+www: "https://redcatch.co.uk"
 screenShot: "/img/ss/rc.png"
+related:
+ - "culture-rebel"
+ - "pure-yoga"
 ---
 <div class="u-p-first-child">
     <strong>Redcatch Construction came to fffood with no more than an idea and a sense of ambition.</strong> They wanted to launch a new construction and scaffolding business — but didn’t want to look like a startup. They wanted to look like a £5 million outfit from day one.
