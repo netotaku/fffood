@@ -16,9 +16,11 @@ function toggle() {
     href="#"
     @click.prevent="toggle"
   >
-    <i v-if="!isOpen" class="fa-solid fa-burger"></i>
+    <i v-if="!isOpen" class="fa-solid fa-bars"></i>
     <i v-else class="fa-solid fa-xmark"></i>    
   </a>
+
+  
 
   <Teleport to="#js-overlay">
     <nav v-if="isOpen" class="overlay" @click.self="toggle">

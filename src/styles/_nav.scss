@@ -84,22 +84,20 @@
         font-weight: normal;
 
         min-width: 60px; 
+
+        font-size: 1.3em;
         
         &--burger{
             display: none!important;
             background-color: vars.$colour-bubblegum-pink;
-            font-size: 1.5em;
-                        
+                    
             @media (max-width: 900px){
                 display: flex!important;
             }  
         }
         &--contact{
-            font-size: 1.5em;
+            
             background-color: vars.$colour-green;
-            @media (max-width: 600px){
-                
-            }  
         }
 
         
@@ -114,6 +112,9 @@
         position: absolute;
         z-index: 1;        
         margin-top: 125px;
-        // margin-left: 10px;
+        width: 160px;
+        @media (max-width: 600px){
+            width: 120px;   
+        }  
     }
 }

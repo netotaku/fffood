@@ -38,5 +38,8 @@
         overflow-y: scroll;
         min-height: 260px;
         margin-bottom: 70px;
-    }
+        @media (max-width: 600px){
+            min-height: 100px;
+        }
+    }  
 }
