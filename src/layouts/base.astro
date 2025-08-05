@@ -46,7 +46,7 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
                         </Burger>
                     </div>
                     <div class="nav__bar">
-                        <a class="nav__button nav__button--contact" href="https://wa.me/447771535355">
+                        <a class="nav__button nav__button--contact" target="_blank" href="https://wa.me/447771535355">
                             <i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -81,20 +81,27 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
 
         <section class="section">
             <div class="section__inner footer">
-                <div class="footer__left">
-                    <ul>
-                        <li><a class="footer__link footer__link--lrg" href="tel:07771535355">07771 535 355</a></li>
-                        <li><a class="footer__link footer__link--lrg" href="mailto:desk@fffood.agency">desk@fffood.agency</a></li>
-                    </ul>
-                    <ul>
-                        <li><i class="fa-solid fa-heart u-red"></i> Bristol, UK. <a href="/cookies-and-privacy">Privacy &amp; Cookies</a></li>				
-                    </ul>
+                <div class="footer__top">
+                    <div class="grid grid--footer">                    
+                        <img class="footer__brand" src="/img/fffood-brand-white.png">
+                        <p class="u-measure footer__right"><strong>Smart, purposeful and affordable digital.</strong> <br class="u-no-mobile">Shaped by big brand thinking.</p>
+                    </div>
                 </div>
-
-                <div class="footer__right">
-                    <ul>
-                        <Links />                        
-                    </ul>
+                <div class="grid grid--footer grid--mobile-reverse">
+                    <div class="footer__left">
+                        <ul>
+                            <li><a class="footer__link footer__link--lrg" href="tel:07771535355">07771 535 355</a></li>
+                            <li><a class="footer__link footer__link--lrg" href="mailto:desk@fffood.agency">desk@fffood.agency</a></li>
+                        </ul>
+                        <ul>
+                            <li><i class="fa-solid fa-heart u-red"></i> Bristol, UK. <a href="/cookies-and-privacy">Privacy &amp; Cookies</a></li>				
+                        </ul>
+                    </div>
+                    <div class="footer__right">
+                        <ul>
+                            <Links />                        
+                        </ul>
+                    </div>
                 </div>
 
             </div> <!-- /.section__inner -->

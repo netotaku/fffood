@@ -37,6 +37,16 @@
         margin-top: var(--gutter);
     }
 
+    &--footer{
+        justify-content: space-between; 
+    }  
+ 
+    &--moblile-reverse{
+       @media (max-width: 600px){
+            flex-direction: column-reverse!important;
+        }   
+    }
+
     @media (max-width: 600px){
         flex-direction: column;
     }

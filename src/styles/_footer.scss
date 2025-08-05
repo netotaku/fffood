@@ -2,9 +2,6 @@
 
 .footer{
 
-    display: flex;
-    justify-content: space-between;
-
     a{
         color: #ccc;
     }
@@ -23,13 +20,23 @@
     }
 
     &__right{
-        text-align: right;
+        text-align: right;        
     }
 
+    &__top{
+        min-width: 100%;
+        margin-bottom: var(--gutter);
+    }
+
+    &__brand{
+        display: block;
+       //  margin-bottom: var(--gutter);
+        width: 100px;
+    }   
+
     @media (max-width: 600px) {
-        flex-direction: column-reverse;
         &__right{
-            margin-bottom: var(--h-rule);
+            // margin-bottom: var(--h-rule);
             text-align: left;
         }
     }

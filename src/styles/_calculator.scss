@@ -14,7 +14,9 @@
         font-weight: bold;
     }
     &__well{
-        background-color: vars.$colour-bubblegum-pink;
+        background: linear-gradient(to bottom, vars.$colour-bubblegum-pink 0%, #A83572 100%);
+        //background-color: 
+        // 
     }
     &__headline{
         @media (max-width: 600px) {

@@ -39,7 +39,8 @@
 
                     <section class="section section--fade">
                         <div class="section__inner">
-                            <p class="u-measure"><strong>This tool gives you a rough idea of costs</strong> — we'll refine things together based on your needs, and for larger projects, onboarding is always part of the process.</p>
+                            <p class="u-measure"><strong>This tool gives you a rough idea of costs</strong> — we'll refine things together based on your needs, and for larger projects, onboarding is always part of the process.
+                                <br><a @click.prevent="setTab('rate-card')" href="#">A more detailed breakdown</a></p>
                         </div>
 
                         <div class="calculator__well">
@@ -47,7 +48,36 @@
                                 <div class="section__info">
                                     <p><span class="u-label"><strong>{{ slide.heading }}</strong></span></p>
                                     <h1 class="calculator__headline">{{ slide.headline }}</h1>
-                                    <p v-html="slide.description"></p>                    
+                                    <p v-html="slide.description"></p>  
+                                    
+                                    
+<div class="calculator__action">
+                                <div class="calculator__nav">
+                                    <a  class="button button--green" 
+                                        :class="{ 'button--disabled': added }"
+                                        href="#" 
+                                        @click.prevent="add(slide.cursor)">
+                                            <i class="fa-solid fa-plus"></i> Add</a>
+                                </div>
+                                        <div class="calculator__nav">
+
+                                            <a :class="`button button--bubblegum ${p_modifier}`" 
+                                                href="#" 
+                                                @click.prevent="navigate(-1)">
+                                                    <i class="fa-solid fa-chevron-left"></i></a>
+                                            
+                                            &nbsp;
+
+                                            <a :class="`button button--bubblegum ${n_modifier}`" 
+                                                href="#" 
+                                                @click.prevent="navigate(1)">
+                                                    <i class="fa-solid fa-chevron-right"></i></a>
+
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
 
                                 <div class="well well--no-pad bill">
@@ -67,10 +97,10 @@
                                                 <tr v-for="(item, i) in basket">
                                                     <td class="table__cell table__cell--center table__cell--slim">
                                                         
-                                                        <a v-if="!slides[item].required" class="round" @click.prevent="remove(i)" href="#">
-                                                            <i class="fa-solid fa-minus"></i></a>
-                                                        <span v-else class="round round--green">
-                                                            <i class="fa-solid fa-check"></i></span>
+                                                        <a v-if="!slides[item].required" class="round round--green" @click.prevent="remove(i)" href="#">
+                                                            <i class="fa-solid fa-check"></i></a>
+                                                        <span v-else>
+                                                            <i class="fa-solid fa-lock"></i></span>
                                                         
                                                     </td>
                                                     <td>{{ slides[item].label }}</td>
@@ -95,36 +125,7 @@
                         </div> <!-- /.section__inner -->
                     </section> <!-- /.section -->         
 
-                    <section class="section section--dark">
-                        <div class="section__inner section__inner--slim">	
-
-                            <div class="calculator__action">
-                                <div class="calculator__nav">
-                                    <a  class="button button--green" 
-                                        :class="{ 'button--disabled': added }"
-                                        href="#" 
-                                        @click.prevent="add(slide.cursor)">
-                                            <i class="fa-solid fa-plus"></i> Add</a>
-                                </div>
-                                <div class="calculator__nav">
-
-                                    <a :class="`button button--bubblegum ${p_modifier}`" 
-                                        href="#" 
-                                        @click.prevent="navigate(-1)">
-                                            <i class="fa-solid fa-chevron-left"></i></a>
-                                    
-                                    &nbsp;
-
-                                    <a :class="`button button--bubblegum ${n_modifier}`" 
-                                        href="#" 
-                                        @click.prevent="navigate(1)">
-                                            <i class="fa-solid fa-chevron-right"></i></a>
-
-                                </div>
-                            </div>
-
-                        </div> <!-- /.section__inner -->
-                    </section> <!-- /.section --> 
+                    
 
 
                 </div> <!-- /#quote --> 
@@ -138,10 +139,7 @@
                             <div class="section__inner">
                                 <h1>Rate Card</h1>
 
-
-
-
-<div class="well well--no-pad bill">
+                            <div class="well well--no-pad bill">
 
                                 <table class="table bill__header">
                                     <thead>
@@ -289,7 +287,7 @@
 
     const currentTab = ref('quote')
 
-    function setTab(tab: string) {
+    function setTab(tab: string) {        
         currentTab.value = tab
     }
     

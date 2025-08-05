@@ -61,7 +61,7 @@
 .round{
     text-decoration: none;
     display: flex;
-    background: red;
+    background: vars.$colour-off-cream-light;
     color: white;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,10 @@
    
     &:hover{
         @media (min-width: 600px) {
-            background: vars.$colour-off-cream-light;
+            background: red; 
+            i::before{
+                content: "\f068";
+            }           
         }
     }   
     &--disabled{
