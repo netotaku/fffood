@@ -4,13 +4,16 @@ summary: Turning a safe site into a bold, rebellious brand platform.
 techStack: 
  - Squarespace
  - Canva
+ - Figma
 services: 
  - Website
  - Social Assets
-hero: /img/heroes/case-studies/cr-hero.jpg
+hero: /img/heroes/case-studies/cr-hero.png
 www: ""
----			
-Culture Rebel is an HR and training consultancy that doesn’t play by the old rules — but their original website didn’t quite get that across.
+---	
+<div class="u-p-first-child">		
+    <strong>Culture Rebel is an HR and training consultancy that doesn’t play by the old rules</strong> — but their original website didn’t quite get that across.
+</div>
 
 They’d built it themselves in Squarespace, and the content was solid. But the structure felt muddled, the layout too safe, and the visuals didn’t match the spirit of the business. We’d crossed paths through other projects, and they asked if fffood could help dial things up.
 

@@ -17,7 +17,8 @@ const { data } = entry;
 <Layout 
   title={data.title}
   description={data.summary}
-  hero={data.hero}  
+  hero={data.hero} 
+  showCTA={true} 
   >
 
   	<section class="section section--dark">
@@ -37,23 +38,22 @@ const { data } = entry;
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
 
-	<section class="section section--lightest">
+	<section class="section section--dark">
 		<div class="section__inner grid grid--two-thirds-one-third">
-
-			<div class="grid__two-thirds">
+			<div class="typography">
 				<Content />
 			</div>
-			<div class="grid__two-a-third">				
-				<div class="well">
-					<h3>Services</h3>
+			<aside class="section__aside typography">				
+				<div class="well well--dark">
+					<h3 class="well__heading">Services</h3>
 					<ul>
 						{data.services.map((service) => (
 							<li>{service}</li>
 						))}
 					</ul>
 				</div>
-				<div class="well">
-					<h3>Tech Stack</h3>
+				<div class="well well--dark">
+					<h3 class="well__heading">Tech Stack</h3>
 					<ul>
 						{data.techStack.map((tech) => (
 							<li>{tech}</li>
@@ -61,9 +61,7 @@ const { data } = entry;
 					</ul>
 				</div>
 				<p><a class="button button--green" href="" target="_blank">View website</a></p>
-			</div>
-
-			
+			</aside>
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
 

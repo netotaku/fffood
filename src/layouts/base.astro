@@ -10,9 +10,10 @@ interface Props {
 	description: string;
     hero?: string;
     showCTA?: boolean;
+    heroModifier?: string;
 }
 
-const { title, description, hero, showCTA } = Astro.props;
+const { title, description, hero, showCTA, heroModifier } = Astro.props;
 const heroStyle = hero ? `background-image: url('${hero}');` : '';
 
 ---
@@ -50,7 +51,7 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
          
             </div>
         </nav>
-        <section style={heroStyle} class="section section--butter hero">
+        <section style={heroStyle} class={`section section--butter hero ${heroModifier}`}>
 		    <div class="section__inner section__inner--full">				
 			   
             </div> <!-- /.section__inner -->

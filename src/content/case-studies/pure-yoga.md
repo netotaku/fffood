@@ -4,6 +4,7 @@ summary: Helping an independent yoga teacher untangle the tech and bring everyth
 techStack: 
  - Squarespace
  - Momence
+ - Figma
 services: 
  - Website
  - Window Graphics
@@ -12,7 +13,9 @@ services:
 hero: /img/heroes/case-studies/py-hero.png
 www: ""
 ---    
-When Pure Yoga got in touch with fffood, they already had a strong sense of who they were: a trusted teacher offering in-person, online and 1-to-1 yoga sessions. What they didn’t have was a digital setup that worked.
+<div class="u-p-first-child">
+    <strong>When Pure Yoga got in touch with fffood, they already had a strong sense of who they were:</strong> a trusted teacher offering in-person, online and 1-to-1 yoga sessions. What they didn’t have was a digital setup that worked.
+</div>
 
 The original website had been built in WordPress by a now-unavailable supplier. Domains weren’t in her control. A legacy Squarespace account was also in the mix. Everything was a bit stuck. Through a local network connection, she asked if we could help. We said yes — and got to work tidying things up.
 

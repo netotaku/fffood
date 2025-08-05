@@ -1,12 +1,19 @@
 @use "vars";
 
-.well{
-    border: solid 2px vars.$colour-off-cream-dark;
+.well{    
     border-radius: vars.$radius;
     position: relative;
     overflow: hidden;
     background: white;
-    padding: 10px; // var(--h-rule);
-    filter: drop-shadow(3px 3px 0px rgba(0,0,0,.05));
+    padding: var(--h-rule);    
     margin-bottom: var(--h-rule);
+    &--dark{
+        background: #333;
+    }
+    &--no-pad{
+        margin-bottom: 0;
+    }
+    &__heading{
+        margin-bottom: 0!important;
+    }
 }

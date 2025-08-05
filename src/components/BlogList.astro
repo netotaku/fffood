@@ -5,12 +5,12 @@ const posts = await getCollection('blog')
 <div class="grid grid--halves">
     {
         posts.map((post) => (
-            <a class="card" href={`/blog/${post.id}/`} >
-                <div class="card__thumb" style="">                
+            <a class="card card--dark" href={`/blog/${post.id}/`} >
+                <div class="card__thumb" style={`background-image: url(${post.data.hero});`}>                
                     
                 </div>
                 <div class="card__info">
-                    <h3>{post.data.title}</h3>                
+                    <h3 class="card__heading">{post.data.title}</h3>                
                     <p>{post.data.summary}</p>						
                 </div>
             </a>

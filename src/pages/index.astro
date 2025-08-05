@@ -25,32 +25,29 @@ import Blogs from '../components/BlogList.astro'
 
 	<section class="section section--lightest">
 		<div class="section__inner">
-
-			<h2>Recent projects</h2>
-			<p><strong>Every business is different.</strong> These examples show how we’ve adapted our approach to suit different needs, budgets and starting points.</p>
-			<CaseStudies />
-
-		</div> <!-- /.section__inner -->
-	</section> <!-- /.section -->	
-	<section class="section section--light section">
-		<div class="section__inner section__inner--slim">
+			<div class="section__intro">
+				<h2>Recent projects</h2>
+				<p><strong>Every business is different.</strong> These examples show how we’ve adapted our approach to suit different needs, budgets and starting points.</p>
+			</div>
+			<div class="section__list">
+				<CaseStudies />
+			</div>
 			<a class="button button--green" href="/case-studies">Read more</a>
+
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
 
-
-	<section class="section section--lightest">
+	<section class="section section--dark">
 		<div class="section__inner">
-
-			<h2>Blog</h2>
-			<p><strong>Insights, ideas, and practical advice on making the web work better</strong> — for your users and your business.</p>
-			<Blogs />
-
-		</div> <!-- /.section__inner -->
-	</section> <!-- /.section -->	
-	<section class="section section--light section">
-		<div class="section__inner section__inner--slim">
+			<div class="section__intro">
+				<h2>Blog</h2>
+				<p><strong>Insights, ideas, and practical advice on making the web work better</strong> — for your users and your business.</p>
+			</div>
+			<div class="section__list">
+				<Blogs />
+			</div>
 			<a class="button button--green" href="/blog">Read more</a>
+
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->	
 	

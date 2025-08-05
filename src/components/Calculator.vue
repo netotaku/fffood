@@ -3,14 +3,16 @@
     <div class="calculator">
 
         <section class="section section--lightest">
-            <div class="section__inner">	
+            <div class="section__inner grid grid--two-thirds-one-third">	
 
-                <h1>{{ slide.heading }}</h1>
-                <p v-html="slide.description"></p>
-                 <p><small>
-                    <em>Prices do not include VAT</em></small></p>
+                <div class="section__info">
+                    <h1>{{ slide.heading }}</h1>
+                    <p v-html="slide.description"></p>
+                    <p><small>
+                        <em>Prices do not include VAT</em></small></p>
+                </div>
 
-                <div class="well">
+                <div class="well well--no-pad">
                     <table class="table">
                         <thead>
                             <tr>

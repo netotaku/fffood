@@ -7,9 +7,15 @@
     position: relative;
     overflow: hidden;
     border-radius: vars.$radius;
-    // border: solid 2px vars.$colour-off-cream-dark;
-    // filter: vars.$shadow;
+
+    &--dark{
+        background-color: #111;
+    }
     
+    &__heading{
+        margin-bottom: 0!important;
+    }
+
     &__info{
         padding: var(--h-rule);
     }  

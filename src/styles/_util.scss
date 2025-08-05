@@ -12,4 +12,8 @@
     &red{
         color: vars.$colour-bright-red;
     }
+    &p-first-child{
+        font-size: 1.2em;
+        margin-bottom: var(--h-rule);
+    }    
 }

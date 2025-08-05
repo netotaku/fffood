@@ -5,6 +5,11 @@
     max-width: vars.$max-width;
     margin: auto;
 
+    &__list{
+        padding-top: var(--gutter);
+        padding-bottom: var(--gutter);
+    }
+
     &__inner{
         padding: var(--gutter);
         margin: auto;
@@ -46,6 +51,9 @@
         .section__inner{
             max-width: 50%;
             margin-left: 0;
+            @media (max-width: 600px){
+                max-width: 100%;
+            }
         }
     }
 
