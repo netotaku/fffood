@@ -3,6 +3,7 @@
 .calculator{
     &__action{
         display: flex;
+        margin-top: auto;
         justify-content: space-between;
         line-height: 1;
     }
@@ -19,9 +20,18 @@
         // 
     }
     &__headline{
+        font-size: 2.6em;
+        padding-right: var(--gutter);
         @media (max-width: 600px) {
-            font-size: 2em;
+            font-size: 1.6em;
+            padding-right: 0px;
         }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;  
+        flex: 1;        
+        // height: 100%;
     }
 } 
 

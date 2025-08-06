@@ -1,0 +1,68 @@
+[
+  {
+    "id": "discovery",
+    "name": "Discovery & Empathy",
+    "price": 850,
+    "description": "A deep dive into your business goals, audience, and current setup. Includes a practical action plan."
+  },
+  {
+    "id": "branding",
+    "name": "Branding",
+    "price": 600,
+    "description": "Logo, colours, and simple identity guidelines to give you a consistent look."
+  },
+  {
+    "id": "website",
+    "name": "Website",
+    "price": 950,
+    "description": "Design and build, fully branded, easy to update, mobile-ready."
+  },
+  {
+    "id": "seo",
+    "name": "SEO Setup",
+    "price": 400,
+    "description": "Local search setup, keyword planning, and basic on-page optimisation."
+  },
+  {
+    "id": "email",
+    "name": "Email Setup",
+    "price": 300,
+    "description": "Email templates, list building tools, and guidance on sending campaigns."
+  },
+  {
+    "id": "crm",
+    "name": "CRM Setup & Training",
+    "price": 500,
+    "description": "Select, configure, and train you on the right CRM for your business."
+  },
+  {
+    "id": "content",
+    "name": "Content Assets",
+    "price": 300,
+    "description": "Social graphics, templates, and planning tools."
+  },
+  {
+    "id": "workspace",
+    "name": "Workspace + Domain",
+    "price": 150,
+    "description": "Set up professional email, domain, and cloud tools."
+  },
+  {
+    "id": "paidmedia",
+    "name": "Paid Media Setup",
+    "price": 250,
+    "description": "Social or search ad setup with budgets you control."
+  },
+  {
+    "id": "training",
+    "name": "Training (per session)",
+    "price": 100,
+    "description": "Focused training on tools, content, or workflows."
+  },
+  {
+    "id": "adhoc",
+    "name": "Ad hoc Tasks",
+    "price": 40,
+    "description": "One-off edits, small changes, extra meetings, or iterations."
+  }
+]

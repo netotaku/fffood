@@ -6,19 +6,15 @@
     background-size: cover;
     background-position: center bottom;
 
-    &--home{
-        background-image: url(/img/bg.jpg);
-        min-height: 550px;
-        background-repeat: no-repeat;
-        background-position: center right;
-        background-size: auto 850px;
-        @media (max-width: 800px) {
-            background-size: auto 100%;
-        }
+    &--slim{
+        min-height: 140px;
     }
 
     @media (max-width: 600px) {
-       min-height: 400px;
+        min-height: 400px;
+        &--slim{
+            min-height: 130px;
+        }
     }
     
 }

@@ -44,21 +44,24 @@
                         </div>
 
                         <div class="calculator__well">
-                            <div class="section__inner grid grid--halves">	
-                                <div class="section__info">
+                            <div class="section__inner grid grid--halves">
+
+                                
+
+                                <div class="calculator__info">
+                                    
                                     <p><span class="u-label"><strong>{{ slide.heading }}</strong></span></p>
                                     <h1 class="calculator__headline">{{ slide.headline }}</h1>
                                     <p v-html="slide.description"></p>  
-                                    
-                                    
-<div class="calculator__action">
-                                <div class="calculator__nav">
-                                    <a  class="button button--green" 
-                                        :class="{ 'button--disabled': added }"
-                                        href="#" 
-                                        @click.prevent="add(slide.cursor)">
-                                            <i class="fa-solid fa-plus"></i> Add</a>
-                                </div>
+                                        
+                                    <div class="calculator__action">
+                                        <div class="calculator__nav">
+                                            <a  class="button button--green" 
+                                                :class="{ 'button--disabled': added }"
+                                                href="#" 
+                                                @click.prevent="add(slide.cursor)">
+                                                    <i class="fa-solid fa-plus"></i> Add</a>
+                                        </div>
                                         <div class="calculator__nav">
 
                                             <a :class="`button button--bubblegum ${p_modifier}`" 
@@ -74,13 +77,14 @@
                                                     <i class="fa-solid fa-chevron-right"></i></a>
 
                                         </div>
-                                    </div>
+                                    </div> <!-- /.action -->
+                                    
+                                </div> <!-- /.info -->
 
 
 
-                                </div>
 
-                                <div class="well well--no-pad bill">
+                                <div class="well well--no-pad bill u-shadow">
 
                                     <table class="table bill__header">
                                         <thead>
@@ -120,8 +124,10 @@
                                             </tfoot>
                                         </table>
                                     </div>
-                                </div>
-                            </div> <!-- /.calculator__well -->
+                                </div> <!-- /.bill -->
+
+
+                            </div> <!-- /.grid -->
                         </div> <!-- /.section__inner -->
                     </section> <!-- /.section -->         
 
@@ -135,43 +141,68 @@
                     role="tabpanel"
                     :hidden="currentTab !== 'rate-card'"
                     aria-labelledby="tab-rate-card">
+
+
                         <section class="section section--fade">
                             <div class="section__inner">
-                                <h1>Rate Card</h1>
-
-                            <div class="well well--no-pad bill">
-
-                                <table class="table bill__header">
-                                    <thead>
-                                        <tr>                                            
-                                            <th>Task</th>
-                                            <th class="table__cell table__cell--right">Price</th>                                
-                                        </tr>
-                                    </thead>                         
-                                    <tbody>
-                                        <tr v-for="slide in slides">                                           
-                                            <td>{{ slide.label }}</td>
-                                            <td class="table__cell table__cell--right">{{ formatCurrency(slide.price) }}</td>
-                                        </tr>
-                                    </tbody>   
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="2"><small><em>Prices do not include VAT</em></small></td>
-                                        </tr>
-                                    </tfoot>                                                                        
-                                </table>
-                                
+                
+                                <p class="u-measure"><strong>We keep our pricing simple and upfront.</strong> Each element has a clear, fixed cost, 
+                                    so it's easy to understand and budget for.</p>
                             </div>
+                            <div class="calculator__well">
+                                <div class="section__inner">
+                                    <div class="well well--no-pad bill u-shadow u-scroll">
+
+                                        <h2>Rate Card</h2>
+
+                                        <table class="table table--scrollable bill__header">
+                                            <thead>
+                                                <tr>                                            
+                                                    <th>Task</th>
+                                                    <th class="table__cell table__cell--right">Price</th>                                                                               
+                                                </tr>
+                                            </thead>                         
+                                            <tbody>
+                                                <template v-for="(item, index) in rateCard" :key="index">
+                                                    <tr>                                           
+                                                        <td class="table__heading"><strong>{{ item.name }}</strong></td>
+                                                        <td class="table__cell table__cell--right table__heading">{{ formatCurrency(item.price) }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            {{ item.description }}
+                                                        </td>
+                                                    </tr>
+                                                </template>
+                                            </tbody>   
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="2"><small><em>Prices do not include VAT</em></small></td>
+                                                </tr>
+                                            </tfoot>                                                                        
+                                        </table>
+                                        
+                                       
 
 
+                                    </div>
 
-
-
-
-
-
+                                     <p class="u-measure">&nbsp;<br>
+                                            Your project will be a tailored mix of these services — 
+                                    we'll recommend what you need based on your goals, starting point, and budget
+                                        </p>
+                                </div>
                             </div>
-                        </section>
+                 
+
+
+
+
+
+
+
+                       
+                    </section>
                 </div> <!-- /.tabs__tabs__tab --> 
             </div> <!-- /.tabs__tabs -->
         </div> <!-- /.tabs -->
@@ -184,6 +215,7 @@
 
     import { reactive, ref } from 'vue'
     import slides from '../data/slides.json' 
+    import rateCard from '../data/rate-card.json' 
 
     const cursor = ref(0)
     const total = ref(0)
