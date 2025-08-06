@@ -1,0 +1,28 @@
+---
+import WWD from "../data/what-we-do.json";
+import Services from "../data/services.json";
+---
+
+        <div class="u-bottom-margin">
+            <h1>What we do</h1>
+            <p class="u-measure"><strong>Every project follows the same simple path</strong> — learn what’s needed, design the right solution, and make it happen.</p>
+            <h3>Services</h3>
+        </div>	
+        <div class="u-bottom-margin">
+           <div class="services grid grid--quaters grid--mobile-no-gap grid--services">
+                {Services.map(service => (
+                    <div>
+                        <strong>{service.label}</strong>
+                        <ul class="services__list">
+                            {service.services.map(item => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+           </div>
+        </div>
+
+
+
+<p><a class="button button--bubblegum" href="/what-we-do">Learn more</a></p>

@@ -3,9 +3,10 @@ import '../styles/base.scss';
 import BaseLayout from '../layouts/base.astro'
 import CaseStudies from '../components/CaseStudyList.astro'
 import Blogs from '../components/BlogList.astro'
+import WhatWeDo from '../components/WhatWeDo.astro'
 ---
 <BaseLayout
-	title="fffood" 
+	title="fffood / Smart, purposeful and affordable digital in Bristol, UK" 
 	description="We give small businesses a confident digital presence"
 	showCTA={true}>
 
@@ -22,6 +23,14 @@ import Blogs from '../components/BlogList.astro'
 
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
+
+	<section class="section section--car">
+		<div class="u-fade">
+			<div class="section__inner">
+				<WhatWeDo />
+			</div>
+		</div>
+	</section>
 
 	<section class="section section--fade">
 		<div class="section__inner">

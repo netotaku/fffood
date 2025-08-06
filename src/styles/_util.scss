@@ -9,6 +9,9 @@
             display: none!important;
         }
     }
+    &bottom-margin{
+        margin-bottom: var(--h-rule);
+    }
     &red{
         color: vars.$colour-bright-red;
     }
@@ -34,5 +37,8 @@
     }
     &grey{
         color: #666;
+    }
+    &fade{
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.9) 100%);
     }
 }

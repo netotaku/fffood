@@ -1,0 +1,36 @@
+[
+    {
+        "label": "Digital Marketing",
+        "services": [
+            "SEO", 
+            "AI Search", 
+            "Social",
+            "CRM"
+        ]
+    },{
+        "label": "Web",
+        "services": [
+            "User experince",
+            "Design", 
+            "Development",             
+            "Content management"
+        ]        
+    },{
+        "label": "Graphic Design",
+        "services": [
+            "Branding", 
+            "Business cards", 
+            "Van livery",
+            "Banners, posters and fliers"
+        ]
+    },{
+        "label": "IT",
+        "services":[
+            "Hosting", 
+            "Domain names", 
+            "Google Workspace", 
+            "Email setup"
+        ]
+
+    }
+]

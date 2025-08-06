@@ -1,0 +1,7 @@
+.services{
+    &__list{
+        @media (max-width: 980px){
+            display: none;
+        }        
+    }
+}
