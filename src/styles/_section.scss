@@ -70,7 +70,8 @@
        //  background-image: url(/img/heroes/case-studies.png);
         background-image: url(/img/heroes/crew.jpg);
         background-size: cover;
-        padding-top: 300px;
+        background-position: bottom;
+        padding-top: 360px;
         @media (max-width: 600px) {
             padding-top: 0;
         }
