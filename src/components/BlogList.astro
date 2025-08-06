@@ -5,7 +5,7 @@ const posts = await getCollection('blog')
 <div class="grid grid--halves">
     {
         posts.map((post) => (
-            <a class="card card--dark" href={`/blog/${post.id}/`} >
+            <a class="card card--dark u-shadow" href={`/blog/${post.id}/`} >
                 <div class="card__thumb">                
                     <img src={post.data.hero}>
                 </div>

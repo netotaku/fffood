@@ -20,15 +20,21 @@ function toggle() {
     <i v-else class="fa-solid fa-xmark"></i>    
   </a>
 
-  
-
   <Teleport to="#js-overlay">
     <nav v-if="isOpen" class="overlay" @click.self="toggle">
-      <ul>
-        <slot />
-      </ul>
-    </nav>
+      <div class="overlay__inner">
+        <ul>
+          <slot />
+        </ul>
+        <p>
+          <a href="tel:07771535355">07771 535 355</a><br>
+          <a href="mailto:desk@fffood.agency">desk@fffood.agency</a><br>
+          <a href="/cookies-and-privacy">Privacy and Cookies</a>
+        </p>
+      </div>
+    </nav>    
   </Teleport>
+
 </template>
 
 

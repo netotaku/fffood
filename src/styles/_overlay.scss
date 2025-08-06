@@ -1,19 +1,39 @@
+@use "vars";
+
 .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   z-index: 1;
+
   display: flex;
+  // flex-direction: column;
   align-items: center;
   padding: var(--gutter);
-  line-height: 1;
+   
+
   a{
-    text-decoration: none;
-    font-family: oswald;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    font-weight: bold;
     color: white;
+    text-decoration: none;
   }
+
+    ul{
+      line-height: 1; 
+      a{
+
+        text-decoration: none;
+        font-family: oswald;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        font-weight: bold;
+        
+        &.active{
+          color: vars.$colour-bubblegum-pink;
+        }
+      }
+  
+    
+  }
+  
 }
