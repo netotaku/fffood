@@ -46,7 +46,7 @@
                     <label class="">    
                         <input v-model="form.subscribe" type="checkbox" name="subscribe" checked />&nbsp;
                         <span>Subscribe for occasional updates and useful digital tips.<br>
-                            <a href="/privacy-and-cookies">We respect your privacy</a></span>
+                            <a href="/cookies-and-privacy">We respect your privacy</a></span>
                     </label>
                 </p>
 

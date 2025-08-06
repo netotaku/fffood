@@ -54,6 +54,9 @@
     &--butter{
         background-color: vars.$colour-butter-yellow;
     }
+    &--bubblegum{
+        background: linear-gradient(to bottom, vars.$colour-bubblegum-pink 0%, #A83572 100%);
+    }
     &--fade{    
         background: linear-gradient(to bottom, #333 0%, #111 100%);
     }
