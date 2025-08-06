@@ -22,13 +22,17 @@
         max-width: vars.$max-width;        
         padding-left: var(--gutter);
         padding-right: var(--gutter);
-        margin: auto;        
+        margin: auto;  
+
     }
 
     &__bars{
         display: flex;
         margin-top: 30px;
         width: 100%;
+        @media (max-width: 980px){
+            justify-content: flex-end;
+        }  
     }
 
     &__bar{
@@ -52,6 +56,12 @@
         &--stretch{
             flex: 1 1 auto; 
         }
+
+        &--no-mobile{
+            @media (max-width: 980px){
+                display: none;
+            }              
+        }        
     
     }
 
@@ -72,9 +82,6 @@
             }
         }
                     
-        @media (max-width: 910px){
-            display: none;
-        }      
     }
     
     &__button{  
@@ -91,7 +98,7 @@
             display: none!important;
             background-color: vars.$colour-bubblegum-pink;
                     
-            @media (max-width: 900px){
+            @media (max-width: 980px){
                 display: flex!important;
             }  
         }
@@ -109,12 +116,23 @@
     }
 
     &__brand{
+        display: block;
         position: absolute;
         z-index: 1;        
-        margin-top: 125px;
-        width: 160px;
-        @media (max-width: 600px){
+        // margin-top: 125px;
+        width: 180px;
+        height: auto!important;
+        margin-top: -10px;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 980px){
             width: 120px;   
+            padding: 0!important; 
+            margin-top: -3px;           
         }  
     }
 }

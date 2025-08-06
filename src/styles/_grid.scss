@@ -41,7 +41,7 @@
         justify-content: space-between; 
     }  
  
-    &--moblile-reverse{
+    &--mobile-reverse{
        @media (max-width: 600px){
             flex-direction: column-reverse!important;
         }   

@@ -6,7 +6,7 @@
     }
     &no-mobile{
         @media (max-width: 800px) {
-            display: none;
+            display: none!important;
         }
     }
     &red{
@@ -26,5 +26,10 @@
         position: relative;
         overflow: hidden;
         border-radius: vars.$radius;
+    }
+    &shadow{
+        --shadow-offset: 5px;
+        --shadow-color: rgba(141, 141, 141, 0.2);
+        box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--shadow-color);
     }
 }

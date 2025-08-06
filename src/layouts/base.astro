@@ -30,12 +30,12 @@ const heroStyle = hero ? `background-image: url('${hero}');` : '';
         <nav class="nav">
             <div class="nav__inner">
 
-                <a href="/">
-                    <img class="nav__brand brand" src="/img/fffood-brand-red.png">
+                <a class="nav__brand" href="/">
+                    <img class="brand" src="/img/fffood-brand-red.png">
                 </a>   
                 
                 <div class="nav__bars">   
-                    <div class="nav__bar nav__bar--stretch nav__bar--blur">                    
+                    <div class="nav__bar nav__bar--stretch nav__bar--blur nav__bar--no-mobile">                    
                         <ul class="nav__links">
                             <Links />                                                
                         </ul>
