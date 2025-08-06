@@ -67,9 +67,10 @@
         background: rgba(0,0,0,.5);
     }
     &--car{
-        background-image: url(/img/heroes/case-studies.png);
+       //  background-image: url(/img/heroes/case-studies.png);
+        background-image: url(/img/heroes/crew.jpg);
         background-size: cover;
-        padding-top: 350px;
+        padding-top: 300px;
         @media (max-width: 600px) {
             padding-top: 200px;
         }
