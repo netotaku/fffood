@@ -1,6 +1,6 @@
 [
     {
-        "label": "Digital Marketing",
+        "label": "Marketing",
         "services": [
             "SEO", 
             "AI Search", 
@@ -8,7 +8,7 @@
             "CRM"
         ]
     },{
-        "label": "Web",
+        "label": "Websites",
         "services": [
             "User experience",
             "Design", 
@@ -24,7 +24,7 @@
             "Banners, posters and fliers"
         ]
     },{
-        "label": "IT",
+        "label": "Tech",
         "services":[
             "Hosting", 
             "Domain names", 

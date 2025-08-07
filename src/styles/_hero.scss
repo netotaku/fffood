@@ -10,10 +10,15 @@
         min-height: 140px;
     }
 
-    @media (max-width: 600px) {
+    &--slim-at-mobile{
+
+    }
+
+    @media (max-width: 600px) {        
         min-height: 400px;
-        &--slim{
-            min-height: 130px;
+        &--slim{                
+            background-size: auto;        
+            min-height: 120px;        
         }
     }
     
