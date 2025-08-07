@@ -1,7 +1,12 @@
 ---
 import ServiceCategories from "../data/services.json";
+
+interface Props {
+    modifier?: string;
+}
+const { modifier } = Astro.props;
 ---
-<div class="services grid grid--quaters grid--mobile-no-gap grid--services">
+<div class={`services grid grid--quaters grid--mobile-no-gap grid--services ${modifier}`}>
     {ServiceCategories.map(service => (
         <div>
             <strong>{service.label}</strong>

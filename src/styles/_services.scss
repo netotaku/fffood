@@ -1,7 +1,14 @@
 .services{
+    &--colapse{
+        .services__list{
+            @media (max-width: 980px){
+                display: none;
+            }        
+        }
+    }
     &__list{
         @media (max-width: 980px){
-            display: none;
-        }        
+            margin-bottom: var(--h-rule);
+        }
     }
 }
