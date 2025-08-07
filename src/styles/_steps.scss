@@ -1,0 +1,56 @@
+@use "vars";
+
+.steps{
+
+    --bg: rgba(0,0,0,.1);
+
+    &__step{
+
+        background: vars.$colour-bubblegum-pink;
+        text-align: center;
+        // padding: var(--h-rule);
+        position: relative;
+        overflow: hidden;
+        border-radius: vars.$radius;
+
+        &__row{
+            // padding: var(--h-rule);
+        }
+        
+        &__label {
+            font-weight: bold; 
+            background-color: var(--bg);
+            padding-top: var(--h-rule);           
+        }
+        &__number {
+            font-family: Oswald;
+            font-weight: bold;
+            font-size: 6em;
+            line-height: 1;
+            padding-bottom: var(--h-rule);
+            color: rgba(255,255,255,.6);
+            background-color: var(--bg);
+        }
+        &__title {
+            text-transform: uppercase; 
+            font-family: Oswald;
+            font-weight: bold; 
+            font-size: 2em;
+            padding-top: var(--h-rule);
+        }
+        &__decription {
+            padding-bottom: var(--h-rule);
+            padding-left: var(--h-rule);
+            padding-right: var(--h-rule);
+        }
+        &__output {
+            &__title{
+
+            }
+        }            
+        &__icon {
+           padding: var(--h-rule);
+        }
+        
+    }
+}

@@ -3,18 +3,19 @@
     "title": "Understand",
     "intro": "We start by learning about your business, your goals, and what’s getting in the way.",
     "detail": "Through our discovery process, we get to know your history, audience, and ambitions. We look at what’s already in place, what’s missing, and what could be working harder. This step is about clarity — knowing exactly where you are now and where you want to go.",
+    "output": "",
     "icon": "fa-solid fa-comments"
-  },
-  {
+  },{
     "title": "Plan",
     "intro": "Next, we shape a plan that fits your needs, budget, and capacity to manage it.",
     "detail": "We recommend the right mix of services and tools — from branding and websites to content, CRM, SEO, and beyond. Each element has a clear purpose and price, so you know exactly what you’re getting and why.",
+    "output": "",
     "icon": "fa-solid fa-file-pen"    
-  },
-  {
+  },{
     "title": "Deliver",
     "intro": "Then we make it happen — setting you up with everything you need to move forward.",
     "detail": "We create and configure your chosen elements, launch your new assets, and provide the training and tools so you can manage them confidently. The goal is to give you a professional, consistent presence that’s built to last.",
+    "output": "",
     "icon": "fa-solid fa-box-open"
   }
 ]

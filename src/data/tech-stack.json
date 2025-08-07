@@ -1,0 +1,70 @@
+{
+    "Marketing": {
+        "SEO & AI Search": [
+            "Google",
+            "Moz",
+            "Semrush"
+        ],
+        "CRM": [
+            "EmailOctopus",
+            "MailChimp",
+            "Zoho",
+            "CiviCRM",
+            "Hubspot",
+            "Salesforce & Pardot"
+        ]
+    },
+    "Websites": {
+        "Languages": [
+            "JavaScript / Node",
+            "PHP", 
+            "CSS / SASS / BEM"
+        ], 
+        "Frameworks": [
+            "Vue", 
+            "Laravel"
+        ],
+        "Content Management": [
+            "CraftCMS", 
+            "Hubspot", 
+            "Shopify",
+            "Astro",
+            "Squarespace",
+            "Wordpress (.com / .org)"
+        ]
+    },
+    "Design": {
+        "Graphics": [
+            "Figma", 
+            "Sketch", 
+            "Illustrator", 
+            "Procreate", 
+            "Canva"
+        ],
+        "Motion": [
+            "CapCut"
+        ]
+    },
+    "Tech": {
+        "Workspace": [
+            "Google Workspace", 
+            "Office 365"
+        ],
+        "PaaS": [
+            "Netlify",
+            "Heroku",
+            "Azure"
+        ],
+        "DNS, CDN and Domains": [
+            "Cloudflare",
+            "Gandi",
+            "GoDaddy",
+            "AWS EC2"
+        ],
+        "Hosting": [
+            "Catalyst 2",
+            "Fasthosts",
+            "AWS"
+        ]
+    }
+}

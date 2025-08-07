@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/base.astro'
+import AI from '../../components/AI.astro';
+import Services from '../../components/Services.astro'
+import Steps from '../../components/Steps.astro';
+---
+<BaseLayout
+	title="fffood / What we do" 
+	description="How much does it cost"
+	hero="/img/heroes/crew.jpg"
+	heroModifier="hero--slim"
+	showCTA={true}>
+
+	<section class="section section--darkest">
+		<div class="section__inner">
+			<h1>What we do</h1>	
+			<p class="u-measure"><strong>We help small businesses and growing brands show up with clarity and confidence</strong> — online and off. Whether you need a joined-up digital presence, a refreshed brand, or a better way of working behind the scenes, we'll help you figure out what matters and deliver it without the faff.</p>	
+		</div> <!-- /.section__inner -->
+	</section> <!-- /.section -->
+
+	<section class="section">
+		<div class="u-fade">
+			<div class="section__inner">			
+				<h2>Our Process</h2>
+				<p class="u-measure"><strong>We follow the same core process for every client</strong> — whether you're a startup, a family business, or an established brand doing a refresh.</p>
+				<Steps />
+			</div> <!-- /.section__inner -->
+		</div>
+	</section> <!-- /.section -->
+	
+	<section class="section section--fade">
+		<div class="section__inner">
+			<h2>What we can help with</h2>
+			<p><strong>Here's a flavour of the services we offer</strong> — always tailored to your business:</p>
+			<Services />
+			<p><a class="button button--bubblegum u-top-margin" href="/case-studies">Case studies</a></p>
+		</div>
+	</section>
+
+	<AI />
+
+</BaseLayout>

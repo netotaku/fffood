@@ -1,0 +1,46 @@
+---
+import Process from "../data/process.json";    
+---
+<div class="steps">
+    <div class="grid grid--thirds">
+
+        {Process.map((step, i) => (
+            <div class="steps__step u-shadow">
+                <div class="steps__step__row steps__step__label">Step</div>
+                <div class="steps__step__row steps__step__number">0{i+1}</div>
+                <div class="steps__step__row steps__step__title">{step.title}</div>
+                <div class="steps__step__row steps__step__decription"><p>{step.intro}</p></div>
+                {/* <div class="steps__step__row steps__step__output">
+                    <p>
+                        <span class="steps__step__output__title">Output</span> 
+                        {step.output}
+                    </p>
+                </div>         */}
+                <div class="steps__step__row steps__step__icon">
+                    <i class={step.icon}></i>
+                </div>
+            </div>   
+        ))}
+
+    </div>
+</div>
+
+
+
+
+<!-- 
+
+We start with a deep dive into your business — your goals, your audience, and what's getting in the way. This empathy-led phase is all about clarity.
+
+
+ <div class="steps__step u-shadow">
+        <h3 class="u-no-bottom"><span class="u-grey">2.</span> Plan</h3>				
+        <p>Once we understand the challenge, we recommend the right mix of services — from branding and websites to SEO, email, or CRM. Everything has a purpose <a href="/pricing">and a fixed cost</a>.</p>
+        <p><em>Output: A focused proposal with all the building blocks, ready to go.</em></p>
+    </div>
+
+    <div class="steps__step u-shadow">
+        <h3 class="u-no-bottom"><span class="u-grey">3.</span> Deliver</h3>			
+        <p>We build, configure and launch your new assets — whether that's a brand identity, a website, a content pack or a workspace setup. We also offer training so you can run things confidently.</p>
+        <p><em>Output: A consistent, professional presence that's built to last.</em></p>
+    </div> -->
