@@ -5,17 +5,13 @@
     --bg: rgba(0,0,0,.1);
 
     &__step{
-
-        background: vars.$colour-bubblegum-pink;
+        
+        background: linear-gradient(to bottom, vars.$colour-bubblegum-pink 0%, #A83572 100%);
         text-align: center;
-        // padding: var(--h-rule);
+
         position: relative;
         overflow: hidden;
         border-radius: vars.$radius;
-
-        &__row{
-            // padding: var(--h-rule);
-        }
         
         &__label {
             font-weight: bold; 
@@ -42,12 +38,7 @@
             padding-bottom: var(--h-rule);
             padding-left: var(--h-rule);
             padding-right: var(--h-rule);
-        }
-        &__output {
-            &__title{
-
-            }
-        }            
+        }       
         &__icon {
            padding: var(--h-rule);
         }
