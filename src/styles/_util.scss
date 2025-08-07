@@ -9,8 +9,14 @@
             display: none!important;
         }
     }
+    &no-bottom{
+        margin-bottom: 0px!important;
+    }
     &bottom-margin{
         margin-bottom: var(--h-rule);
+    }
+    &top-margin{
+        margin-top: var(--h-rule);
     }
     &red{
         color: vars.$colour-bright-red;

@@ -76,6 +76,15 @@
             padding-top: 0;
         }
     }
+    &--robots{
+        background-image: url(/img/heroes/robots.jpg);
+        background-size: cover;
+        background-position: bottom;
+        padding-top: 360px;
+        @media (max-width: 600px) {
+            padding-top: 0;
+        }
+    }
     &--girl{
 
         background-image: url(/img/heroes/hero.jpg);        
