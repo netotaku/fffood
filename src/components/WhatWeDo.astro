@@ -1,27 +1,13 @@
 ---
-import WWD from "../data/what-we-do.json";
-import Services from "../data/services.json";
+import Services from "../components/Services.astro";
 ---
 
-        <div class="u-bottom-margin">
-            <h2>What we do</h2>            
-            <p class="u-measure"><strong>Whether it's a new website, a social strategy or just making your brand feel joined-up</strong> — we focus on what will really move your business forward.</p>
-        </div>	
-        <div class="u-bottom-margin">
-           <div class="services grid grid--quaters grid--mobile-no-gap grid--services">
-                {Services.map(service => (
-                    <div>
-                        <strong>{service.label}</strong>
-                        <ul class="services__list">
-                            {service.services.map(item => (
-                                <li>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-           </div>
-        </div>
-
-
+<div class="u-bottom-margin">
+    <h2>What we do</h2>            
+    <p class="u-measure"><strong>Whether it's a new website, a social strategy or just making your brand feel joined-up</strong> — we focus on what will really move your business forward.</p>
+</div>	
+<div class="u-bottom-margin">
+    <Services />
+</div>
 
 <p><a class="button button--bubblegum" href="/what-we-do">Learn more</a></p>

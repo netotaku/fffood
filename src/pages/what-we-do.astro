@@ -1,24 +1,62 @@
 ---
-import '../styles/base.scss';
 import BaseLayout from '../layouts/base.astro'
+import AI from '../components/AI.astro';
+import Services from '../components/Services.astro';
 ---
 <BaseLayout
 	title="fffood / What we do" 
 	description="How much does it cost"
 	hero="/img/heroes/crew.jpg"
-	heroModifier="hero--slim">
+	heroModifier="hero--slim"
+	showCTA={true}>
 
 
 	<section class="section section--darkest">
 		<div class="section__inner">
-			<h1>What we do</h1>		
+			<h1>What we do</h1>	
+			<p class="u-measure"><strong>We help small businesses and growing brands show up with clarity and confidence</strong> — online and off. Whether you need a joined-up digital presence, a refreshed brand, or a better way of working behind the scenes, we'll help you figure out what matters and deliver it without the faff.</p>	
 		</div> <!-- /.section__inner -->
 	</section> <!-- /.section -->
 
-	<section class="section section--lightest">
+	<section class="section section--bubblegum">
 		<div class="section__inner">
-			<p><strong>Page on its way ...</strong></p>
+			
+				<h2>Our Process</h2>
+
+				<p class="u-measure"><strong>We follow the same core process for every client</strong> — whether you're a startup, a family business, or an established brand doing a refresh.</p>
+
+				<div class="grid grid--thirds">
+					<div class="well well--bubblegum u-shadow">
+						<h3 class="u-no-bottom"><span class="u-grey">1.</span> Understand</h3>
+						<p>We start with a deep dive into your business — your goals, your audience, and what’s getting in the way. This empathy-led phase is all about clarity.</p>
+						<p><em>Output: A strategic plan shaped around your budget, goals and capacity.</em></p>
+					</div>
+
+					<div class="well well--bubblegum u-shadow">
+						<h3 class="u-no-bottom"><span class="u-grey">2.</span> Plan</h3>				
+						<p>Once we understand the challenge, we recommend the right mix of services — from branding and websites to SEO, email, or CRM. Everything has a purpose <a href="/pricing">and a fixed cost</a>.</p>
+						<p><em>Output: A focused proposal with all the building blocks, ready to go.</em></p>
+					</div>
+
+					<div class="well well--bubblegum u-shadow">
+						<h3 class="u-no-bottom"><span class="u-grey">3.</span> Deliver</h3>			
+						<p>We build, configure and launch your new assets — whether that's a brand identity, a website, a content pack or a workspace setup. We also offer training so you can run things confidently.</p>
+						<p><em>Output: A consistent, professional presence that's built to last.</em></p>
+					</div>
+				</div>
+
 		</div> <!-- /.section__inner -->
-	</section> <!-- /.section -->	
+	</section> <!-- /.section -->
+	
+	<section class="section section--fade">
+		<div class="section__inner">
+			<h2>What we can help with</h2>
+			<p>Here's a flavour of the services we offer — always tailored to your business:</p>
+			<Services />
+			<p><a class="button button--bubblegum u-top-margin" href="/case-studies">Case studies</a></p>
+		</div>
+	</section>
+
+	<AI />
 
 </BaseLayout>

@@ -17,6 +17,9 @@
     }
     &top-margin{
         margin-top: var(--h-rule);
+        @media (max-width: 600px) { 
+            margin-top: 0px;
+        }
     }
     &red{
         color: vars.$colour-bright-red;
@@ -42,7 +45,7 @@
         box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--shadow-color);
     }
     &grey{
-        color: #666;
+        opacity: .5;
     }
     &fade{
         background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.9) 80%);

@@ -1,0 +1,15 @@
+---
+import ServiceCategories from "../data/services.json";
+---
+<div class="services grid grid--quaters grid--mobile-no-gap grid--services">
+    {ServiceCategories.map(service => (
+        <div>
+            <strong>{service.label}</strong>
+            <ul class="services__list">
+                {service.services.map(item => (
+                    <li>{item}</li>
+                ))}
+            </ul>
+        </div>
+    ))}
+</div>

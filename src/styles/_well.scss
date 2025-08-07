@@ -21,6 +21,10 @@
     &--full{
         padding: 0; 
     }
+    &--bubblegum{
+        background-color: vars.$colour-bubblegum-pink;
+        color: white;
+    }
 }
 
 .browser{
